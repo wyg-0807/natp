@@ -1,0 +1,129 @@
+<!--#layout("/eova/layout/list.html",{'title' : object.name + I18N('列表')}){
+// 计算子高度
+var SH = config.params.slave_height!300;
+-->
+
+<div class="eova-layout" style="width: calc(100% - 20px); height: calc(100% - 20px); margin: 10px;">
+	<div class="zone" style="width: 100%; height: 100%;">
+		<div class="box" style="height: 43px;">
+		
+			<#query id="queryForm" objectCode="${object.code}" />
+			
+		</div>
+
+		<div class="zone" style="height: calc(100% - 10px - 43px); top: calc(43px + 10px)">
+			<div class="box" style="height: calc(100% - ${SH + 50}px - 10px);">
+
+				<!--#include("/eova/template/common/toolbar.html",{id: 'master_grid_toolbar', 'parentId': 'master_grid', 'queryId': 'queryForm', 'btnList': btnMap[0]}){}-->
+				
+				<#table id="master_grid" toolbar="master_grid_toolbar" objectCode="${config.objectCode}" menuCode="${menu.code}" isFirstLoad="true" />
+
+			</div>
+			
+			<div class="box" style="height: ${SH + 50}px; top: calc(100% - ${SH + 50}px)">
+			
+				<div class="layui-tab layui-tab-card" lay-filter="tabs" style="height: ${SH + 50}px;">
+					<ul class="layui-tab-title">
+						<!--#for(x in objects){-->
+						<li lay-id="${xLP.index}" class="${xLP.first ? 'layui-this' : ''}">${x.name}</li>
+						<!--#}-->
+					</ul>
+					<div class="layui-tab-content" style="height: auto">
+						
+						<!--#for(var i=0;i<objects.~size;i++){-->
+		        		<!--#var x = objects[i];-->
+		                <div class="layui-tab-item ${i == 0 ? 'layui-show' : ''}">
+							
+							<div class="layui-btn-container" id="${x.code}_toolbar" style="display: none;">
+							<!--#if(!isEmpty(btnMap[i+1]!)){// 有按钮授权才显示-->
+	                            <!--#for(btn in btnMap[i+1]){-->
+								<!--#include(btn.ui,{'object':x, 'gridId': x.code + '_grid', 'parentId': 'master_grid', config : config, 'field' : config.fields[i] , 'button':btn }){}-->
+	                            <!--#}-->
+	                        <!--#}-->
+							</div>
+							<#table id="${x.code}_grid" pid="master_grid" toolbar="${x.code}_toolbar" configJson="${configJson!}" objectCode="${x.code}" isFirstLoad="false" isPaging="false" height="${SH}" />
+						</div>
+			        	<!--#}-->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var masterSelectRow;
+
+// 主表加载完成回调
+function master_gridDone(res, curr, count) {
+	layui.use(['table', 'element'], function() {
+		var $ = layui.$,
+		table = layui.table;
+		
+		// 主表刷新, 清空子表数据
+		<!--#for(x in objects){-->
+		table.reload('${x.code}_grid', {
+			where : {
+				// 强行弄一个不存在条件把数据清掉
+				${'query_' + config.fields[xLP.index-1]} : 5201314666
+			}
+		});
+		<!--#}-->
+		
+		// 清空主的选中记录
+		masterSelectRow = undefined;
+	});
+}
+
+// 主表选中行事件回调
+function master_gridSelect(o){
+	layui.use(['table', 'element'], function() {
+		var $ = layui.$,
+		table = layui.table,
+		element = layui.element;
+		
+		// 主表行选中后自动切换到第一个子Tab
+		var ID = '${config.objects[0]}_grid';
+		element.tabChange('tabs', 1);
+	  	table.reload(ID, {
+			where : {
+	       		${'query_' + config.fields[0]} : o.data.${config.objectField}
+			}
+		});
+		
+		// 记录主选中数据
+	  	masterSelectRow = o.data;
+	
+	});
+}
+
+layui.use(['table', 'element'], function() {
+	var $ = layui.$,
+	table = layui.table,
+	element = layui.element;
+
+	// 子选项卡切换
+	element.on('tab(tabs)', function(o){
+		<!--#for(x in objects){-->
+		if(o.index == ${xLP.index-1}){
+			if(masterSelectRow){
+			  	table.reload('${x.code}_grid', {
+					where : {
+			       		${'query_' + config.fields[xLP.index-1]} : masterSelectRow.${config.objectField}
+					}
+				});
+			}
+		}
+		<!--#}-->
+	});
+	
+});
+
+</script>
+
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<!--#if(!isEmpty(menu.diy_js!)){-->
+<script type="text/javascript" src="${menu.diy_js}"></script>
+<!--#}--> <!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}--> <!--#}-->

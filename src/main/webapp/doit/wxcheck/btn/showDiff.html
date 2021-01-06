@@ -1,0 +1,16 @@
+<button class="layui-btn layui-btn-sm" onclick="showDiff()">
+  <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+  var showDiff = function(){
+    var ID = '${gridId}';
+
+    var rows = getSelectRows(ID);
+    if (rows.length === 0) {
+      $.msg('请选择一行数据');
+      return;
+    }
+
+    window.open('/wxcheck/showDiff?date=' + rows[0]['date']);
+  };
+</script>

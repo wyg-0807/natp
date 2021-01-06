@@ -1,0 +1,60 @@
+<!--#layout("/eova/layout/list.html",{'title' : object.name + I18N('列表')}){-->
+<!--#
+	var tree = menu.config.tree;
+-->
+
+<div class="eova-layout" style="width: calc(100% - 20px); height: calc(100% - 20px); margin: 10px;">
+	<div class="zone" style="width: 100%; height: 100%;">
+		<div class="box" style="width: 250px;overflow: auto;">
+
+			<#tree id="master_tree" menuCode="${menu.code}" objectCode="${tree.objectCode}" idKey="${tree.idField}" nameKey="${tree.treeField}" pidKey="${tree.parentField}" iconKey="${tree.iconField!}" rootPid="${tree.rootPid}" expandAll="true" />
+		
+		</div>
+		<div class="zone" style="width: calc(100% - 10px - 250px); left: calc(10px + 250px);">
+			<div class="box" style="height: 40px;">
+			
+			<#query id="queryForm" objectCode="${object.code}" />
+			
+			</div>
+			<div class="box" style="height: calc(100% - 10px - 40px); top: calc(40px + 10px)">
+
+				<!--#include("/eova/template/common/toolbar.html", {id: 'toolbar', 'parentId': 'grid', 'queryId': 'queryForm'}){}-->
+				
+				<#table id="grid" objectCode="${object.code}" toolbar="toolbar" menuCode="${menu.code}" />
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+//Tree Node OnClick
+var nodeClick = function(e, treeId, node) {
+	var code = node.${tree.objectField};
+	
+	layui.use(['table'], function() {
+		var $ = layui.$,
+		table = layui.table;
+		
+		// 按Tree选中节点来初始化显示Grid内容
+		var ID = 'grid';
+	  	table.reload(ID, {
+			where : {
+	       		'query_${menu.config.objectField}': code
+			}
+		});
+	  	
+	});
+};
+
+$(function(){
+	$.fn.zTree.getZTreeObj("master_tree").setting.callback.onClick = nodeClick;
+});
+</script>
+
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<!--#if(!isEmpty(menu.diy_js!)){-->
+<script type="text/javascript" src="${menu.diy_js}"></script>
+<!--#}--> <!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}--> <!--#}-->

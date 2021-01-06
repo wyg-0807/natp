@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>微信错单 - ${ret.date, dateFormat="yyyyMMdd"}</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="/eova/plugins/layui/dist/css/layui.css" media="all">
+  <style>
+    p.tips {
+      color: red;
+      font-size: large;
+    }
+    .layui-card-header {
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+<div class="layui-fluid">
+  <!--# if (ret.state == "fail") { -->
+  <div class="layui-card">
+    <div class="layui-card-body">
+      <p class="error">
+        查询错单发生错误：<br/>${ret.msg}
+      </p>
+    </div>
+  </div>
+  <!--# } else { -->
+  <!--# if (ret.diffWxPayments.~size > 0) { -->
+  <div class="layui-card">
+    <div class="layui-card-header layuiadmin-card-header-auto">
+      <p>充值错单</p>
+      <p class="tips">微信充值错单，一般是微信充值成功，但HIS充值失败。请根据微信订单号或商户订单号，到【账务管理 - 微信支付】处确认无误后，重新发起HIS充值即可。</p>
+    </div>
+    <div class="layui-card-body">
+      <table class="layui-table" lay-even lay-skin="line" lay-size="sm">
+        <thead>
+        <tr>
+          <th>序号</th>
+          <th>交易时间</th>
+          <th>就诊卡号</th>
+          <th>微信订单号</th>
+          <th>商户订单号</th>
+          <th>交易金额</th>
+          <th>交易状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--# for (r in ret.diffWxPayments) { -->
+        <tr>
+          <td>${rLP.index}</td>
+          <td>${r.tradeTime}</td>
+          <td>${r.jzCard}</td>
+          <td>${r.transactionId}</td>
+          <td>${r.outTradeNo}</td>
+          <td>${r.totalFee}</td>
+          <td>${r.tradeState}</td>
+        </tr>
+        <!--# } -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--# }-->
+  <!--# if (ret.diffHisRefunds.~size > 0) { -->
+  <div class="layui-card">
+    <div class="layui-card-header layuiadmin-card-header-auto">
+      <p>退款错单</p>
+      <p class="tips">微信退款错单，一般是HIS退款成功，但微信退款失败。请根据微信支付单号或交易凭据号，到【账务管理 - 微信退款】处确认无误后，重新发起微信退款即可。</p>
+    </div>
+    <div class="layui-card-body">
+      <table class="layui-table" lay-even lay-skin="line" lay-size="sm">
+        <thead>
+        <tr>
+          <th>序号</th>
+          <th>清算日期</th>
+          <th>交易时间</th>
+          <th>交易金额</th>
+          <th>就诊卡号</th>
+          <th>商户支付单号</th>
+          <th>交易凭据号</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--# for (r in ret.diffHisRefunds) { -->
+        <tr>
+          <td>${rLP.index}</td>
+          <td>${r.date, dateFormat="yyyyMMdd"}</td>
+          <td>${r.orderTime, dateFormat="yyyyMMddHHmmss"}</td>
+          <td>${r.amount}</td>
+          <td>${r.cardNo}</td>
+          <td>${r.flowNo}</td>
+          <td>${r.receiptNo}</td>
+        </tr>
+        <!--# } -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--# }-->
+  <!--# } -->
+</div>
+<script src="/eova/plugins/layui/dist/layui.js"></script>
+</body>
+</html>

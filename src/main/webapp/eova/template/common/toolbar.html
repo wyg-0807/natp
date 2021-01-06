@@ -1,0 +1,15 @@
+<div class="layui-btn-container" id="${id}" style="display: none;">
+	<!--#if(isQuery){-->
+		<!--#include("/eova/template/common/query.html",{'queryId': queryId, 'parentId': parentId}){}-->
+	<!--#}-->
+
+	<!--#if(!isEmpty(btnList!)){-->
+		<!--#for(btn in btnList){-->
+			<!--#include(btn.ui,{'menu': menu, 'object': object, 'button': btn, 'gridId': parentId}){}-->
+		<!--#}-->
+	<!--#}-->
+
+	<!--#if(session.user.isAdmin){-->
+		<!--#include("/eova/button/btn/quick.html",{'menu': menu}){}-->
+	<!--#}-->
+</div>

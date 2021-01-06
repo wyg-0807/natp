@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>${title!}</title>
+<!--#include("/eova/meta.html"){}-->
+<!--#include("/eova/include2.html"){}-->
+${headContent!}
+</head>
+<body>
+${layoutContent!}
+<script>
+$(function(){
+	// 控件初始化
+    $.initEovaUI();
+    
+    setTimeout(function () {
+	    // 等待各UI组件渲染完毕
+	}, 100);
+    
+	$.eovaLayoutResize();
+    
+    // 监听 浏览器窗口 变动 事件,对子layout进行重绘
+	$(window).resize(function(){
+		$.eovaLayoutResize();
+	});
+});
+</script>
+<!--// 超级管理员快捷功能入口-->
+<!--#if(session.user.isAdmin){-->
+<ul class="layui-fixbar">
+	<li class="layui-icon layui-icon-util" onclick="dialog(null, '修改菜单', '/form/update/eova_menu_code-${menu.id!}', 720, 615)" title="快速配置菜单"></li>
+</ul>
+<!--#}-->
+</body>
+</html>

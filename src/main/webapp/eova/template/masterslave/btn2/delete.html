@@ -1,0 +1,9 @@
+<button class="layui-btn layui-btn-sm" onclick="slave_${object.code}_deletes()">
+	<i class="layui-icon" layui-icon-delete></i> ${button.name!'删除'}
+</button>
+<script type="text/javascript">
+	var slave_${object.code}_deletes = function() {
+		var ID = '${gridId}';
+		confirmDel(ID, '${object.code}');
+	};
+</script>

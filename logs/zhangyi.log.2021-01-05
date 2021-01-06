@@ -1,0 +1,2153 @@
+
+01-05 10:21:50-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 10:21:50-org.jboss.logging.DelegatingBasicLogger.debugf()
+[DEBUG][org.jboss.logging.DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384)]Setting default session timeout to 1800
+
+01-05 10:21:50-io.undertow.server.session.InMemorySessionManager.registerSessionListener()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.registerSessionListener(InMemorySessionManager.java:239)]Registered session listener io.undertow.servlet.core.SessionListenerBridge@42607a4f
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]app.config
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]domain.config
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]eova.config
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]jdbc.config
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]默认配置加载成功:(resources/default)
+
+
+01-05 10:21:50-cn.hutool.log.LogFactory.create()
+[DEBUG][cn.hutool.log.LogFactory.create(LogFactory.java:161)]Use [Slf4j] Logger As Default.
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_eova?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 10:21:50-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_main?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 10:21:51-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-1} inited
+
+01-05 10:21:51-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-2} inited
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:132)]Configuring ehcache from ehcache.xml found in the classpath: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:98)]Configuring ehcache from URL: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:150)]Configuring ehcache from InputStream
+
+01-05 10:21:51-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xmlns:xsi
+
+01-05 10:21:51-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+01-05 10:21:51-net.sf.ehcache.config.DiskStoreConfiguration.translatePath()
+[DEBUG][net.sf.ehcache.config.DiskStoreConfiguration.translatePath(DiskStoreConfiguration.java:141)]Disk Store Path: C:\Users\ASUS\AppData\Local\Temp\
+
+01-05 10:21:51-net.sf.ehcache.CacheManager.newInstance()
+[DEBUG][net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1102)]Creating new CacheManager with default config
+
+01-05 10:21:51-net.sf.ehcache.util.PropertyUtil.parseProperties()
+[DEBUG][net.sf.ehcache.util.PropertyUtil.parseProperties(PropertyUtil.java:87)]propertiesString is null.
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener(ConfigurationHelper.java:189)]No CacheManagerEventListenerFactory class specified. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 10:21:51-net.sf.ehcache.store.MemoryStore.<init>()
+[DEBUG][net.sf.ehcache.store.MemoryStore.<init>(MemoryStore.java:180)]Initialized net.sf.ehcache.store.MemoryStore for service
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: REMOTE_SIZE
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_GET
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_PUT
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_REMOVE
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_GET
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_PUT
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_REMOVE
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_COMMIT
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_ROLLBACK
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_RECOVERY
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: CLUSTER_EVENT
+
+01-05 10:21:51-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: NONSTOP
+
+01-05 10:21:51-net.sf.ehcache.Cache.initialise()
+[DEBUG][net.sf.ehcache.Cache.initialise(Cache.java:1262)]Initialised cache: service
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators(ConfigurationHelper.java:334)]CacheDecoratorFactory not configured. Skipping for 'service'.
+
+01-05 10:21:51-net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators(ConfigurationHelper.java:364)]CacheDecoratorFactory not configured for defaultCache. Skipping for 'service'.
+
+01-05 10:21:52-org.xnio.Xnio.<clinit>()
+[INFO][org.xnio.Xnio.<clinit>(Xnio.java:104)]XNIO version 3.3.8.Final
+
+01-05 10:21:52-org.xnio.nio.NioXnio.<clinit>()
+[INFO][org.xnio.nio.NioXnio.<clinit>(NioXnio.java:55)]XNIO NIO Implementation Version 3.3.8.Final
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@5c45cf7
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@35ab788c
+
+01-05 10:21:52-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:117)]starting undertow server io.undertow.Undertow@3d7fa3ae
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@595fb41b
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@420673c1
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@d613c4
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@4b8be5b2
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-13', selector sun.nio.ch.WindowsSelectorImpl@9fba983
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@42d95a11
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 Accept', selector sun.nio.ch.WindowsSelectorImpl@8ea574e
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-10', selector sun.nio.ch.WindowsSelectorImpl@628e4f66
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-12', selector sun.nio.ch.WindowsSelectorImpl@1f67713f
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-11', selector sun.nio.ch.WindowsSelectorImpl@5e3ae0f2
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-9', selector sun.nio.ch.WindowsSelectorImpl@6f8f7d1b
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@363c5793
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@a989249
+
+01-05 10:21:52-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@18629ec8
+
+01-05 10:21:52-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:157)]Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9000
+
+01-05 10:21:52-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 10:21:52-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /toLogin
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /toLogin, authentication required: false
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /toLogin
+
+01-05 10:21:52-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /toLogin
+
+01-05 10:21:53-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /favicon.ico
+
+01-05 10:21:53-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /favicon.ico, authentication required: false
+
+01-05 10:21:53-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /favicon.ico
+
+01-05 10:21:53-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /favicon.ico
+
+01-05 10:21:59-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /doLogin
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /doLogin, authentication required: false
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /doLogin
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /doLogin
+
+01-05 10:21:59-io.undertow.server.session.InMemorySessionManager.createSession()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.createSession(InMemorySessionManager.java:185)]Created session with id Ak1DXll61hGeQCsNZN32VkOma3XXpYHZ6wUZz4dZ for exchange HttpServerExchange{ POST /doLogin}
+
+01-05 10:21:59-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 10:21:59-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /welcome
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /welcome, authentication required: false
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /welcome
+
+01-05 10:21:59-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /welcome
+
+01-05 10:22:52-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:52289
+
+01-05 10:22:52-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:52288
+
+01-05 10:22:59-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /127.0.0.1:52287
+
+01-05 10:40:55-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /single_grid/list/sys_users
+
+01-05 10:40:55-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /single_grid/list/sys_users, authentication required: false
+
+01-05 10:40:55-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /single_grid/list/sys_users
+
+01-05 10:40:55-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /single_grid/list/sys_users
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/json2-min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/json2-min.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/ui/js/json2-min.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/table.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/json2-min.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/nice/jquery.validator.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/easyui/jquery.easyui.min.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/eova/i18n/zh_CN.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/table.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/ztree/js/jquery.ztree.all.min.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/nice/jquery.validator.min.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/ui/js/table.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/table.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/nice/jquery.validator.min.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/nice/jquery.validator.min.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/My97DatePicker/WdatePicker.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/format/jsformat.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/operation.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/format/jsformat.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/plugins/format/jsformat.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/format/jsformat.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/operation.js, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /eova/ui/js/operation.js
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/operation.js
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/object/eova_user_code
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/object/eova_user_code, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /meta/object/eova_user_code
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/object/eova_user_code
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/fields/eova_user_code
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/fields/eova_user_code, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /meta/fields/eova_user_code
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/fields/eova_user_code
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /widget/comboJson/eova_user_code-rid
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /widget/comboJson/eova_user_code-rid, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /widget/comboJson/eova_user_code-rid
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /widget/comboJson/eova_user_code-rid
+
+01-05 10:40:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /grid/query/eova_user_code-sys_users
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /grid/query/eova_user_code-sys_users, authentication required: false
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /grid/query/eova_user_code-sys_users
+
+01-05 10:40:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /grid/query/eova_user_code-sys_users
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53188
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53187
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53189
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53191
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53186
+
+01-05 10:41:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53190
+
+01-05 10:42:00-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /copyright
+
+01-05 10:42:00-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /copyright, authentication required: false
+
+01-05 10:42:00-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /copyright
+
+01-05 10:42:00-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /copyright
+
+01-05 10:43:00-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:53212
+
+01-05 11:00:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /copyright
+
+01-05 11:00:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /copyright, authentication required: false
+
+01-05 11:00:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@54e2e712 for /copyright
+
+01-05 11:00:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /copyright
+
+01-05 11:01:56-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:54319
+
+01-05 11:14:50-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 11:18:45-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 11:18:45-org.jboss.logging.DelegatingBasicLogger.debugf()
+[DEBUG][org.jboss.logging.DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384)]Setting default session timeout to 1800
+
+01-05 11:18:45-io.undertow.server.session.InMemorySessionManager.registerSessionListener()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.registerSessionListener(InMemorySessionManager.java:239)]Registered session listener io.undertow.servlet.core.SessionListenerBridge@42607a4f
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]app.config
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]domain.config
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]eova.config
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]jdbc.config
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]默认配置加载成功:(resources/default)
+
+
+01-05 11:18:45-cn.hutool.log.LogFactory.create()
+[DEBUG][cn.hutool.log.LogFactory.create(LogFactory.java:161)]Use [Slf4j] Logger As Default.
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_eova?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 11:18:45-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_main?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 11:18:45-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-1} inited
+
+01-05 11:18:46-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-2} inited
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:132)]Configuring ehcache from ehcache.xml found in the classpath: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:98)]Configuring ehcache from URL: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:150)]Configuring ehcache from InputStream
+
+01-05 11:18:46-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xmlns:xsi
+
+01-05 11:18:46-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+01-05 11:18:46-net.sf.ehcache.config.DiskStoreConfiguration.translatePath()
+[DEBUG][net.sf.ehcache.config.DiskStoreConfiguration.translatePath(DiskStoreConfiguration.java:141)]Disk Store Path: C:\Users\ASUS\AppData\Local\Temp\
+
+01-05 11:18:46-net.sf.ehcache.CacheManager.newInstance()
+[DEBUG][net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1102)]Creating new CacheManager with default config
+
+01-05 11:18:46-net.sf.ehcache.util.PropertyUtil.parseProperties()
+[DEBUG][net.sf.ehcache.util.PropertyUtil.parseProperties(PropertyUtil.java:87)]propertiesString is null.
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener(ConfigurationHelper.java:189)]No CacheManagerEventListenerFactory class specified. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 11:18:46-net.sf.ehcache.store.MemoryStore.<init>()
+[DEBUG][net.sf.ehcache.store.MemoryStore.<init>(MemoryStore.java:180)]Initialized net.sf.ehcache.store.MemoryStore for service
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: REMOTE_SIZE
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_GET
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_PUT
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_REMOVE
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_GET
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_PUT
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_REMOVE
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_COMMIT
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_ROLLBACK
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_RECOVERY
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: CLUSTER_EVENT
+
+01-05 11:18:46-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: NONSTOP
+
+01-05 11:18:46-net.sf.ehcache.Cache.initialise()
+[DEBUG][net.sf.ehcache.Cache.initialise(Cache.java:1262)]Initialised cache: service
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators(ConfigurationHelper.java:334)]CacheDecoratorFactory not configured. Skipping for 'service'.
+
+01-05 11:18:46-net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators(ConfigurationHelper.java:364)]CacheDecoratorFactory not configured for defaultCache. Skipping for 'service'.
+
+01-05 11:18:47-org.xnio.Xnio.<clinit>()
+[INFO][org.xnio.Xnio.<clinit>(Xnio.java:104)]XNIO version 3.3.8.Final
+
+01-05 11:18:47-org.xnio.nio.NioXnio.<clinit>()
+[INFO][org.xnio.nio.NioXnio.<clinit>(NioXnio.java:55)]XNIO NIO Implementation Version 3.3.8.Final
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@5f4d5060
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@78ca5a4
+
+01-05 11:18:47-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:117)]starting undertow server io.undertow.Undertow@3d7fa3ae
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@9fba983
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@8ea574e
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@10c2ef50
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@72ef63fa
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@608d9d36
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@1f67713f
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 Accept', selector sun.nio.ch.WindowsSelectorImpl@736a139e
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-13', selector sun.nio.ch.WindowsSelectorImpl@7d016fd6
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-12', selector sun.nio.ch.WindowsSelectorImpl@71114c51
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-11', selector sun.nio.ch.WindowsSelectorImpl@488aa0c9
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-10', selector sun.nio.ch.WindowsSelectorImpl@104d6f
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-9', selector sun.nio.ch.WindowsSelectorImpl@5acc12e1
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@4309b90b
+
+01-05 11:18:47-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@4d51e236
+
+01-05 11:18:47-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:157)]Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9000
+
+01-05 11:18:55-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 11:18:55-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /toLogin
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /toLogin, authentication required: false
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /toLogin
+
+01-05 11:18:55-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /toLogin
+
+01-05 11:18:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /doLogin
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /doLogin, authentication required: false
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /doLogin
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /doLogin
+
+01-05 11:18:56-io.undertow.server.session.InMemorySessionManager.createSession()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.createSession(InMemorySessionManager.java:185)]Created session with id fv80HOfVh49O8XjmiRInmFqwPcSEWLMpn7xZ0c1Z for exchange HttpServerExchange{ POST /doLogin}
+
+01-05 11:18:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 11:18:56-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /welcome
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /welcome, authentication required: false
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /welcome
+
+01-05 11:18:56-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /welcome
+
+01-05 11:18:58-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /single_grid/list/sys_users
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /single_grid/list/sys_users, authentication required: false
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /single_grid/list/sys_users
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /single_grid/list/sys_users
+
+01-05 11:18:58-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/object/eova_user_code
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/object/eova_user_code, authentication required: false
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /meta/object/eova_user_code
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/object/eova_user_code
+
+01-05 11:18:58-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/fields/eova_user_code
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/fields/eova_user_code, authentication required: false
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /meta/fields/eova_user_code
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/fields/eova_user_code
+
+01-05 11:18:58-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /widget/comboJson/eova_user_code-rid
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /widget/comboJson/eova_user_code-rid, authentication required: false
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /widget/comboJson/eova_user_code-rid
+
+01-05 11:18:58-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /widget/comboJson/eova_user_code-rid
+
+01-05 11:18:59-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /grid/query/eova_user_code-sys_users
+
+01-05 11:18:59-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /grid/query/eova_user_code-sys_users, authentication required: false
+
+01-05 11:18:59-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@348a859e for /grid/query/eova_user_code-sys_users
+
+01-05 11:18:59-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /grid/query/eova_user_code-sys_users
+
+01-05 11:19:55-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:56743
+
+01-05 11:19:59-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:56742
+
+01-05 12:47:09-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 12:47:10-org.jboss.logging.DelegatingBasicLogger.debugf()
+[DEBUG][org.jboss.logging.DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384)]Setting default session timeout to 1800
+
+01-05 12:47:10-io.undertow.server.session.InMemorySessionManager.registerSessionListener()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.registerSessionListener(InMemorySessionManager.java:239)]Registered session listener io.undertow.servlet.core.SessionListenerBridge@42607a4f
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]app.config
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]domain.config
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]eova.config
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]jdbc.config
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]默认配置加载成功:(resources/default)
+
+
+01-05 12:47:10-cn.hutool.log.LogFactory.create()
+[DEBUG][cn.hutool.log.LogFactory.create(LogFactory.java:161)]Use [Slf4j] Logger As Default.
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_eova?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 12:47:10-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_main?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 12:47:10-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-1} inited
+
+01-05 12:47:10-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-2} inited
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:132)]Configuring ehcache from ehcache.xml found in the classpath: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:98)]Configuring ehcache from URL: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:150)]Configuring ehcache from InputStream
+
+01-05 12:47:11-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xmlns:xsi
+
+01-05 12:47:11-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+01-05 12:47:11-net.sf.ehcache.config.DiskStoreConfiguration.translatePath()
+[DEBUG][net.sf.ehcache.config.DiskStoreConfiguration.translatePath(DiskStoreConfiguration.java:141)]Disk Store Path: C:\Users\ASUS\AppData\Local\Temp\
+
+01-05 12:47:11-net.sf.ehcache.CacheManager.newInstance()
+[DEBUG][net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1102)]Creating new CacheManager with default config
+
+01-05 12:47:11-net.sf.ehcache.util.PropertyUtil.parseProperties()
+[DEBUG][net.sf.ehcache.util.PropertyUtil.parseProperties(PropertyUtil.java:87)]propertiesString is null.
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener(ConfigurationHelper.java:189)]No CacheManagerEventListenerFactory class specified. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 12:47:11-net.sf.ehcache.store.MemoryStore.<init>()
+[DEBUG][net.sf.ehcache.store.MemoryStore.<init>(MemoryStore.java:180)]Initialized net.sf.ehcache.store.MemoryStore for service
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: REMOTE_SIZE
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_GET
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_PUT
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_REMOVE
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_GET
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_PUT
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_REMOVE
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_COMMIT
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_ROLLBACK
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_RECOVERY
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: CLUSTER_EVENT
+
+01-05 12:47:11-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: NONSTOP
+
+01-05 12:47:11-net.sf.ehcache.Cache.initialise()
+[DEBUG][net.sf.ehcache.Cache.initialise(Cache.java:1262)]Initialised cache: service
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators(ConfigurationHelper.java:334)]CacheDecoratorFactory not configured. Skipping for 'service'.
+
+01-05 12:47:11-net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators(ConfigurationHelper.java:364)]CacheDecoratorFactory not configured for defaultCache. Skipping for 'service'.
+
+01-05 12:47:12-org.xnio.Xnio.<clinit>()
+[INFO][org.xnio.Xnio.<clinit>(Xnio.java:104)]XNIO version 3.3.8.Final
+
+01-05 12:47:12-org.xnio.nio.NioXnio.<clinit>()
+[INFO][org.xnio.nio.NioXnio.<clinit>(NioXnio.java:55)]XNIO NIO Implementation Version 3.3.8.Final
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@61a660b1
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@565ca058
+
+01-05 12:47:12-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:117)]starting undertow server io.undertow.Undertow@58065f0c
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@60e89c18
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@746a9e98
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@1f59032d
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@7190f280
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@1db591f8
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@387524d7
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-9', selector sun.nio.ch.WindowsSelectorImpl@211cec83
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-12', selector sun.nio.ch.WindowsSelectorImpl@5012f2e4
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-13', selector sun.nio.ch.WindowsSelectorImpl@621b5485
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@30d00f86
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@793d4c58
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 Accept', selector sun.nio.ch.WindowsSelectorImpl@15bea89d
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-10', selector sun.nio.ch.WindowsSelectorImpl@27b3fb51
+
+01-05 12:47:12-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-11', selector sun.nio.ch.WindowsSelectorImpl@6fe743c3
+
+01-05 12:47:12-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:157)]Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9000
+
+01-05 12:47:12-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 12:47:12-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /toLogin
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /toLogin, authentication required: false
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /toLogin
+
+01-05 12:47:12-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /toLogin
+
+01-05 12:47:14-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /doLogin
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /doLogin, authentication required: false
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /doLogin
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /doLogin
+
+01-05 12:47:14-io.undertow.server.session.InMemorySessionManager.createSession()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.createSession(InMemorySessionManager.java:185)]Created session with id mRTedVGirYxJseysg9n3n3OvtjcdsCOgaqHOi2zl for exchange HttpServerExchange{ POST /doLogin}
+
+01-05 12:47:14-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 12:47:14-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /welcome
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /welcome, authentication required: false
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /welcome
+
+01-05 12:47:14-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /welcome
+
+01-05 12:48:12-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:60853
+
+01-05 12:48:12-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:60852
+
+01-05 12:48:14-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /127.0.0.1:60851
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /single_grid/list/sys_users
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /single_grid/list/sys_users, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /single_grid/list/sys_users
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /single_grid/list/sys_users
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/json2-min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/json2-min.js, authentication required: false
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/table.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/ui/js/json2-min.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/json2-min.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/nice/jquery.validator.min.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/table.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/easyui/jquery.easyui.min.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/ui/js/table.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/table.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/ztree/js/jquery.ztree.all.min.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/ztree/js/jquery.ztree.all.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/easyui/jquery.easyui.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/nice/jquery.validator.min.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/eova/i18n/zh_CN.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/nice/jquery.validator.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/nice/jquery.validator.min.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/eova/i18n/zh_CN.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/format/jsformat.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/js/operation.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/My97DatePicker/WdatePicker.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/My97DatePicker/WdatePicker.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/format/jsformat.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/plugins/format/jsformat.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/format/jsformat.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/js/operation.js, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /eova/ui/js/operation.js
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/js/operation.js
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/object/eova_user_code
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/object/eova_user_code, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /meta/object/eova_user_code
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/object/eova_user_code
+
+01-05 12:48:29-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/fields/eova_user_code
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/fields/eova_user_code, authentication required: false
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /meta/fields/eova_user_code
+
+01-05 12:48:29-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/fields/eova_user_code
+
+01-05 12:48:30-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /widget/comboJson/eova_user_code-rid
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /widget/comboJson/eova_user_code-rid, authentication required: false
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /widget/comboJson/eova_user_code-rid
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /widget/comboJson/eova_user_code-rid
+
+01-05 12:48:30-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /grid/query/eova_user_code-sys_users
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /grid/query/eova_user_code-sys_users, authentication required: false
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /grid/query/eova_user_code-sys_users
+
+01-05 12:48:30-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /grid/query/eova_user_code-sys_users
+
+01-05 12:49:29-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61000
+
+01-05 12:49:29-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61002
+
+01-05 12:49:29-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61003
+
+01-05 12:49:29-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61004
+
+01-05 12:49:29-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:60999
+
+01-05 12:49:30-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61001
+
+01-05 13:07:14-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /copyright
+
+01-05 13:07:14-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /copyright, authentication required: false
+
+01-05 13:07:14-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /copyright
+
+01-05 13:07:14-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /copyright
+
+01-05 13:08:14-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61493
+
+01-05 13:08:30-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /copyright
+
+01-05 13:08:30-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /copyright, authentication required: false
+
+01-05 13:08:30-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@61a679ef for /copyright
+
+01-05 13:08:30-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /copyright
+
+01-05 13:09:30-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:61530
+
+01-05 13:38:30-io.undertow.server.session.InMemorySessionManager$SessionImpl.invalidate()
+[DEBUG][io.undertow.server.session.InMemorySessionManager$SessionImpl.invalidate(InMemorySessionManager.java:584)]Invalidating session mRTedVGirYxJseysg9n3n3OvtjcdsCOgaqHOi2zl for exchange null
+
+01-05 16:05:18-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /127.0.0.1:50250
+
+01-05 18:47:25-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 18:47:25-org.jboss.logging.DelegatingBasicLogger.debugf()
+[DEBUG][org.jboss.logging.DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384)]Setting default session timeout to 1800
+
+01-05 18:47:25-io.undertow.server.session.InMemorySessionManager.registerSessionListener()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.registerSessionListener(InMemorySessionManager.java:239)]Registered session listener io.undertow.servlet.core.SessionListenerBridge@42607a4f
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]app.config
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]domain.config
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]eova.config
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]jdbc.config
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]默认配置加载成功:(resources/default)
+
+
+01-05 18:47:25-cn.hutool.log.LogFactory.create()
+[DEBUG][cn.hutool.log.LogFactory.create(LogFactory.java:161)]Use [Slf4j] Logger As Default.
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_eova?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 18:47:25-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_main?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 18:47:26-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-1} inited
+
+01-05 18:47:26-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-2} inited
+
+01-05 18:47:26-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:132)]Configuring ehcache from ehcache.xml found in the classpath: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 18:47:26-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:98)]Configuring ehcache from URL: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 18:47:26-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:150)]Configuring ehcache from InputStream
+
+01-05 18:47:26-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xmlns:xsi
+
+01-05 18:47:26-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+01-05 18:47:26-net.sf.ehcache.config.DiskStoreConfiguration.translatePath()
+[DEBUG][net.sf.ehcache.config.DiskStoreConfiguration.translatePath(DiskStoreConfiguration.java:141)]Disk Store Path: C:\Users\ASUS\AppData\Local\Temp\
+
+01-05 18:47:26-net.sf.ehcache.CacheManager.newInstance()
+[DEBUG][net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1102)]Creating new CacheManager with default config
+
+01-05 18:47:26-net.sf.ehcache.util.PropertyUtil.parseProperties()
+[DEBUG][net.sf.ehcache.util.PropertyUtil.parseProperties(PropertyUtil.java:87)]propertiesString is null.
+
+01-05 18:47:26-net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener(ConfigurationHelper.java:189)]No CacheManagerEventListenerFactory class specified. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 18:47:27-net.sf.ehcache.store.MemoryStore.<init>()
+[DEBUG][net.sf.ehcache.store.MemoryStore.<init>(MemoryStore.java:180)]Initialized net.sf.ehcache.store.MemoryStore for service
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: REMOTE_SIZE
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_GET
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_PUT
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_REMOVE
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_GET
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_PUT
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_REMOVE
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_COMMIT
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_ROLLBACK
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_RECOVERY
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: CLUSTER_EVENT
+
+01-05 18:47:27-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: NONSTOP
+
+01-05 18:47:27-net.sf.ehcache.Cache.initialise()
+[DEBUG][net.sf.ehcache.Cache.initialise(Cache.java:1262)]Initialised cache: service
+
+01-05 18:47:27-net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators(ConfigurationHelper.java:334)]CacheDecoratorFactory not configured. Skipping for 'service'.
+
+01-05 18:47:27-net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators(ConfigurationHelper.java:364)]CacheDecoratorFactory not configured for defaultCache. Skipping for 'service'.
+
+01-05 18:47:27-org.xnio.Xnio.<clinit>()
+[INFO][org.xnio.Xnio.<clinit>(Xnio.java:104)]XNIO version 3.3.8.Final
+
+01-05 18:47:27-org.xnio.nio.NioXnio.<clinit>()
+[INFO][org.xnio.nio.NioXnio.<clinit>(NioXnio.java:55)]XNIO NIO Implementation Version 3.3.8.Final
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@710dcf33
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@3a32186
+
+01-05 18:47:27-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:117)]starting undertow server io.undertow.Undertow@3d7fa3ae
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@4d6e87df
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@24e198a9
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@19c15a5f
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@7209a060
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@23f4d592
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@5402e382
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-9', selector sun.nio.ch.WindowsSelectorImpl@60e89c18
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@2f457866
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-13', selector sun.nio.ch.WindowsSelectorImpl@746a9e98
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-11', selector sun.nio.ch.WindowsSelectorImpl@1db591f8
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-12', selector sun.nio.ch.WindowsSelectorImpl@7190f280
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-10', selector sun.nio.ch.WindowsSelectorImpl@387524d7
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@5aa5ccc2
+
+01-05 18:47:27-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 Accept', selector sun.nio.ch.WindowsSelectorImpl@1f59032d
+
+01-05 18:47:27-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:157)]Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9000
+
+01-05 23:30:51-io.undertow.server.handlers.resource.PathResourceManager.<clinit>()
+[DEBUG][io.undertow.server.handlers.resource.PathResourceManager.<clinit>(PathResourceManager.java:31)]Logging Provider: org.jboss.logging.Log4jLoggerProvider
+
+01-05 23:30:51-org.jboss.logging.DelegatingBasicLogger.debugf()
+[DEBUG][org.jboss.logging.DelegatingBasicLogger.debugf(DelegatingBasicLogger.java:384)]Setting default session timeout to 1800
+
+01-05 23:30:51-io.undertow.server.session.InMemorySessionManager.registerSessionListener()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.registerSessionListener(InMemorySessionManager.java:239)]Registered session listener io.undertow.servlet.core.SessionListenerBridge@6121c9d6
+
+01-05 23:30:51-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]app.config
+
+01-05 23:30:51-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]domain.config
+
+01-05 23:30:51-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]eova.config
+
+01-05 23:30:51-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]jdbc.config
+
+01-05 23:30:51-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]默认配置加载成功:(resources/default)
+
+
+01-05 23:30:52-cn.hutool.log.LogFactory.create()
+[DEBUG][cn.hutool.log.LogFactory.create(LogFactory.java:161)]Use [Slf4j] Logger As Default.
+
+01-05 23:30:52-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_eova?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 23:30:52-com.jfinal.kit.LogKit.info()
+[INFO][com.jfinal.kit.LogKit.info(LogKit.java:55)]load data source:jdbc:mysql://127.0.0.1/natp_main?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false > root
+
+01-05 23:30:52-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-1} inited
+
+01-05 23:30:52-com.alibaba.druid.pool.DruidDataSource.init()
+[INFO][com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:1003)]{dataSource-2} inited
+
+01-05 23:30:52-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:132)]Configuring ehcache from ehcache.xml found in the classpath: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 23:30:52-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:98)]Configuring ehcache from URL: file:/D:/code/natp/target/classes/ehcache.xml
+
+01-05 23:30:52-net.sf.ehcache.config.ConfigurationFactory.parseConfiguration()
+[DEBUG][net.sf.ehcache.config.ConfigurationFactory.parseConfiguration(ConfigurationFactory.java:150)]Configuring ehcache from InputStream
+
+01-05 23:30:52-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xmlns:xsi
+
+01-05 23:30:52-net.sf.ehcache.config.BeanHandler.setAttribute()
+[DEBUG][net.sf.ehcache.config.BeanHandler.setAttribute(BeanHandler.java:271)]Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+01-05 23:30:52-net.sf.ehcache.config.DiskStoreConfiguration.translatePath()
+[DEBUG][net.sf.ehcache.config.DiskStoreConfiguration.translatePath(DiskStoreConfiguration.java:141)]Disk Store Path: C:\Users\ASUS\AppData\Local\Temp\
+
+01-05 23:30:52-net.sf.ehcache.CacheManager.newInstance()
+[DEBUG][net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1102)]Creating new CacheManager with default config
+
+01-05 23:30:52-net.sf.ehcache.util.PropertyUtil.parseProperties()
+[DEBUG][net.sf.ehcache.util.PropertyUtil.parseProperties(PropertyUtil.java:87)]propertiesString is null.
+
+01-05 23:30:52-net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheManagerEventListener(ConfigurationHelper.java:189)]No CacheManagerEventListenerFactory class specified. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.Cache.createBootstrapCacheLoader()
+[DEBUG][net.sf.ehcache.Cache.createBootstrapCacheLoader(Cache.java:1044)]No BootstrapCacheLoaderFactory class specified. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.Cache.createCacheWriter()
+[DEBUG][net.sf.ehcache.Cache.createCacheWriter(Cache.java:1017)]CacheWriter factory not configured. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheExceptionHandler(ConfigurationHelper.java:100)]No CacheExceptionHandlerFactory class specified. Skipping...
+
+01-05 23:30:53-net.sf.ehcache.store.MemoryStore.<init>()
+[DEBUG][net.sf.ehcache.store.MemoryStore.<init>(MemoryStore.java:180)]Initialized net.sf.ehcache.store.MemoryStore for service
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LOCAL_DISK_SIZE_BYTES
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: REMOTE_SIZE
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardPassThruStatistics(ExtendedStatisticsImpl.java:224)]Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_GET
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_PUT
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: OFFHEAP_REMOVE
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_GET
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_PUT
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: DISK_REMOVE
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_COMMIT
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_ROLLBACK
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: XA_RECOVERY
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: CLUSTER_EVENT
+
+01-05 23:30:53-net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics()
+[DEBUG][net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl.findStandardOperationStatistics(ExtendedStatisticsImpl.java:206)]Mocking Operation Statistic: NONSTOP
+
+01-05 23:30:53-net.sf.ehcache.Cache.initialise()
+[DEBUG][net.sf.ehcache.Cache.initialise(Cache.java:1262)]Initialised cache: service
+
+01-05 23:30:53-net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createCacheDecorators(ConfigurationHelper.java:334)]CacheDecoratorFactory not configured. Skipping for 'service'.
+
+01-05 23:30:53-net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators()
+[DEBUG][net.sf.ehcache.config.ConfigurationHelper.createDefaultCacheDecorators(ConfigurationHelper.java:364)]CacheDecoratorFactory not configured for defaultCache. Skipping for 'service'.
+
+01-05 23:30:54-org.xnio.Xnio.<clinit>()
+[INFO][org.xnio.Xnio.<clinit>(Xnio.java:104)]XNIO version 3.3.8.Final
+
+01-05 23:30:54-org.xnio.nio.NioXnio.<clinit>()
+[INFO][org.xnio.nio.NioXnio.<clinit>(NioXnio.java:55)]XNIO NIO Implementation Version 3.3.8.Final
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@1a8f66fe
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@71298ab7
+
+01-05 23:30:54-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:117)]starting undertow server io.undertow.Undertow@41e1455d
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@25c4f2f4
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@595fb41b
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-9', selector sun.nio.ch.WindowsSelectorImpl@42d95a11
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@65b8b333
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@132bf424
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@487c81d6
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@3d55c51f
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-13', selector sun.nio.ch.WindowsSelectorImpl@a989249
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 Accept', selector sun.nio.ch.WindowsSelectorImpl@6f8f7d1b
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-12', selector sun.nio.ch.WindowsSelectorImpl@18629ec8
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-10', selector sun.nio.ch.WindowsSelectorImpl@420673c1
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-11', selector sun.nio.ch.WindowsSelectorImpl@363c5793
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@d613c4
+
+01-05 23:30:54-org.xnio.nio.WorkerThread.run()
+[DEBUG][org.xnio.nio.WorkerThread.run(WorkerThread.java:433)]Started channel thread 'XNIO-2 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@4b8be5b2
+
+01-05 23:30:54-io.undertow.Undertow.start()
+[DEBUG][io.undertow.Undertow.start(Undertow.java:157)]Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9000
+
+01-05 23:31:01-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 23:31:01-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /toLogin
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /toLogin, authentication required: false
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /toLogin
+
+01-05 23:31:01-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /toLogin
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/css/login.css
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/css/login.css, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/ui/css/login.css
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/css/login.css
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/form.js
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/form.js, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/form.js
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/form.js
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/font/iconfont.woff
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/layer.js
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/font/iconfont.woff, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/font/iconfont.woff
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/font/iconfont.woff
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/layer.js, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/layer.js
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/layer.js
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/font/iconfont.ttf
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/font/iconfont.ttf, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/font/iconfont.ttf
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/font/iconfont.ttf
+
+01-05 23:31:02-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /favicon.ico
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /favicon.ico, authentication required: false
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /favicon.ico
+
+01-05 23:31:02-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /favicon.ico
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /doLogin
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /doLogin, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /doLogin
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /doLogin
+
+01-05 23:31:03-io.undertow.server.session.InMemorySessionManager.createSession()
+[DEBUG][io.undertow.server.session.InMemorySessionManager.createSession(InMemorySessionManager.java:185)]Created session with id E6MDgzRwooyNMM8yFb-9T6s-v2rSU4XyGs_MwuUi for exchange HttpServerExchange{ POST /doLogin}
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/eova/theme/layui/eova.css
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/eova/theme/icon/icon.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/eova/theme/layui/eova.css, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/eova/theme/icon/icon.css, authentication required: false
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/css/index.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/eova/theme/icon/icon.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/eova/theme/layui/eova.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/eova/theme/icon/icon.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/eova/theme/layui/eova.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/css/index.css, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/ui/css/index.css
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/css/index.css
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /welcome
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /welcome, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /welcome
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /welcome
+
+01-05 23:31:03-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/element.js
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/element.js, authentication required: false
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/element.js
+
+01-05 23:31:03-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/element.js
+
+01-05 23:31:05-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /single_grid/list/sys_users
+
+01-05 23:31:05-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /single_grid/list/sys_users, authentication required: false
+
+01-05 23:31:05-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /single_grid/list/sys_users
+
+01-05 23:31:05-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /single_grid/list/sys_users
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/ui/css/eova.layout.css
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/ztree/css/metroStyle/metroStyle.css
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/easyui/themes/gray/easyui.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/ztree/css/metroStyle/metroStyle.css, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/ui/css/eova.layout.css, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/easyui/themes/gray/easyui.css, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/ui/css/eova.layout.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/ztree/css/metroStyle/metroStyle.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/ui/css/eova.layout.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/easyui/themes/gray/easyui.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/ztree/css/metroStyle/metroStyle.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/easyui/themes/gray/easyui.css
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/nice/local/zh-CN.js
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/nice/jquery.validator.css
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/My97DatePicker/skin/WdatePicker.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/nice/local/zh-CN.js, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/My97DatePicker/skin/WdatePicker.css, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/nice/local/zh-CN.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/nice/jquery.validator.css, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/My97DatePicker/skin/WdatePicker.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/nice/jquery.validator.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/nice/local/zh-CN.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/nice/jquery.validator.css
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/My97DatePicker/skin/WdatePicker.css
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/object/eova_user_code
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/object/eova_user_code, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /meta/object/eova_user_code
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/object/eova_user_code
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /meta/fields/eova_user_code
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /meta/fields/eova_user_code, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /meta/fields/eova_user_code
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /meta/fields/eova_user_code
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/table.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/table.js, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/table.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/table.js
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /widget/comboJson/eova_user_code-rid
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /widget/comboJson/eova_user_code-rid, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /widget/comboJson/eova_user_code-rid
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /widget/comboJson/eova_user_code-rid
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/laytpl.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/laytpl.js, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/laytpl.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/laytpl.js
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/laypage.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/laypage.js, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/laypage.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/laypage.js
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /eova/plugins/layui/dist/lay/modules/util.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /eova/plugins/layui/dist/lay/modules/util.js, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /eova/plugins/layui/dist/lay/modules/util.js
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /eova/plugins/layui/dist/lay/modules/util.js
+
+01-05 23:31:06-io.undertow.util.PathMatcher.match()
+[DEBUG][io.undertow.util.PathMatcher.match(PathMatcher.java:97)]Matched default handler path /grid/query/eova_user_code-sys_users
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authenticate()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authenticate(SecurityContextImpl.java:86)]Attempting to authenticate /grid/query/eova_user_code-sys_users, authentication required: false
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl$AuthAttempter.transition(SecurityContextImpl.java:247)]Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@7a17d6eb for /grid/query/eova_user_code-sys_users
+
+01-05 23:31:06-io.undertow.security.impl.SecurityContextImpl.authTransition()
+[DEBUG][io.undertow.security.impl.SecurityContextImpl.authTransition(SecurityContextImpl.java:110)]Authentication result was ATTEMPTED for /grid/query/eova_user_code-sys_users
+
+01-05 23:32:06-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:58531
+
+01-05 23:32:06-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:58530
+
+01-05 23:32:06-io.undertow.server.protocol.ParseTimeoutUpdater.run()
+[DEBUG][io.undertow.server.protocol.ParseTimeoutUpdater.run(ParseTimeoutUpdater.java:151)]Timing out idle connection from /0:0:0:0:0:0:0:1:58533

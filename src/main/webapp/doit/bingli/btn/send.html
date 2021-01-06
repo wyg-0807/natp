@@ -1,0 +1,39 @@
+<button class="layui-btn layui-btn-sm" onclick="setRemark()">
+  <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+
+<script type="text/javascript">
+var setRemark = function () {
+  var ID = '${gridId}';
+
+  var rows = getSelectRows(ID);
+  if (rows.length === 0) {
+    $.msg('请选择一行数据');
+    return;
+  }
+
+  if (rows[0]['status_val'] === 9) {
+    $.msg('该申请已被取消');
+    return;
+  }
+
+  layer.prompt({
+    title: '请填写快递单号'
+    , value: rows[0]['expressNo']
+    , formType: 2
+  }, function (value, index) {
+    layer.close(index);
+    $.post('/bingli/send', {id: rows[0]['id'], expressNo: value}, function (ret) {
+      if (ret.state === 'ok') {
+        layer.msg(ret.msg || '操作成功');
+        $.tableReLoad(ID);
+      } else {
+        layer.alert(ret.msg, {
+          title: '警告',
+          icon: 7
+        });
+      }
+    });
+  });
+}
+</script>

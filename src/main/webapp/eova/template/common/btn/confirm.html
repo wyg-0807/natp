@@ -1,0 +1,34 @@
+<!--#// 二次确认通用按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+	<i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+	var eova_btn_${button.id} = function(){
+		var ID = '${gridId}';
+		
+		var rows = getSelectRows(ID);
+        if (rows.length == "0") {
+        	$.msg($.I18N('请选择一行数据'));
+            return;
+        }
+        
+        layer.confirm($.I18N('您确认执行当前操作'), {
+			title : $.I18N('操作提示'),
+			icon : 3,
+			btn : [ '确定', '取消' ]
+		}, function() {
+			$.post('${button.uri!}', {
+				rows : JSON.stringify(rows)
+			}, function(result, status) {
+				if (result.success) {
+					$.msg($.I18N('操作成功'));
+					$.tableReLoad(ID);
+					$.dialogClose(layer, window);
+				} else {
+					$.alert(result.msg);
+				}
+			});
+			// 刷新
+		});
+	};
+</script>

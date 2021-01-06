@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>${obj.title}</title>
+    <link rel="stylesheet" type="text/css" href="//res.wx.qq.com/open/libs/weui/1.1.3/weui.min.css">
+    <style>
+    .article {
+      padding: 10px;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-red {
+        color: red;
+    }
+
+    .publish-time {
+      margin-right: 5px;
+      font-size: small;
+      color: #B9B8BD;
+    }
+
+    .content {
+      padding: 0 10px;
+      margin-bottom: 10px;
+    }
+
+    table, td {
+      border-collapse: collapse !important;
+      border: 1px solid #dddddd !important;
+    }
+
+
+    </style>
+</head>
+<body class="article">
+<!--# if(isEmpty(error!)) {-->
+<h3 class="title text-center">${obj.title}</h3>
+<p class="text-center"><span class="publish-time">${obj.ctime!}</span></p>
+<div class="content">${obj.content!}</div>
+<!--# } else { -->
+<h3 class="title text-center text-red">${error!"发生未知错误"}</h3>
+<!--# } -->
+</body>
+</html>

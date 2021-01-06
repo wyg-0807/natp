@@ -1,0 +1,16 @@
+<button class="layui-btn layui-btn-sm" onclick="singleUpdate()">
+	<i class="layui-icon layui-icon-ok"></i> 保存
+</button>
+
+<script type="text/javascript">
+    var singleUpdate = function () {
+    	if(!singletree.selectNode){
+    		$.msg($.I18N('请选择一个节点进行编辑'));
+			return;
+    	}
+		// 调用IFrame内的保存函数
+    	$('#formFrame')[0].contentWindow.btnSaveCallback(null, function(){
+    		location.reload();
+        }, parent.$);
+    }
+</script>

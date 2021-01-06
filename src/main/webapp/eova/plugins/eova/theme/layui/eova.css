@@ -1,0 +1,355 @@
+/* IE 兼容 */
+::-ms-clear, ::-ms-reveal {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    border-top: 1px solid #eee;
+}
+fieldset legend {
+    margin-left: 20px;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.eova-icon {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	font-family: layui-icon !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.layui-btn .eova-icon {
+	margin-right: 3px;
+	font-size: 18px;
+	vertical-align: bottom;
+	vertical-align: middle\9
+}
+
+.eova-form .eova-form-field {
+	display: inline-block;
+	clear: both;
+	padding: 5px;
+	color: #333;
+	font-size: 14px;
+}
+
+.eova-form-label {
+	float: left;
+	display: block;
+	width: 100px;
+	font-weight: 400;
+	line-height: 32px;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+	cursor: default;
+
+	text-align: right;
+}
+.eova-form-label.red{
+	color: red;
+}
+
+div[class^="eova"]>.eova-icon {
+	position: absolute;
+	right: 10px;
+	top: 25%;
+	cursor: pointer;
+	/* 	left: 193px; 如果设置了这个自定义宽度就会出问题,特殊控件单独制定	*/
+}
+
+/* 鼠标移入图标按钮 */
+div[class^="eova"]>.eova-icon:hover {
+	color: rgb(196, 196, 196);
+}
+
+/* 单元格编辑模式,不占位 */
+.layui-table-cell .eova-form-field>div[class^="eova-"]{
+	min-width: 30px;
+}
+
+.eova-form .eova-form-field>div[class^="eova-"] {
+	margin-left: 110px;
+}
+
+.eova-icons,
+.eova-time,
+.eova-find,
+.eova-combotree,
+.eova-combo,
+.eova-text {
+	/* EOVA控件初始化背景色占位-光秃秃视觉体验很差 */
+	background-color: #e6e6e640;
+}
+
+.eova-num,
+.eova-file,
+.eova-img,
+.eova-texts,
+.eova-bool,
+.eova-times,
+.eova-icons,
+.eova-info,
+.eova-time,
+.eova-find,
+.eova-combotree,
+.eova-combo,
+.eova-text,
+.eova-widget {
+	position: relative;
+	margin: 0;
+	left: 0;
+/* 	margin-left: 110px; TODO 先临时去掉,应该写在 form表单的样式里*/
+	min-height: 20px;
+	/* 最小占位，将如下2个属性设置和控件大小一致可以防止渲染DOM抖动 */
+	min-height: 30px;
+/* 	min-width: 215px; TODO 单元格编辑位置太小*/
+	line-height: 15px;/* 用于兼容单元格模式ICON显示,行高为控件的一半 */
+
+	/* 主要控件 初始化占位 */
+	min-width: 215px;
+	min-height: 30px;
+}
+
+/* 加载初始化效果 */
+.eova-form-field input,
+.eova-form-field select,
+.eova-widget input,
+.eova-form-field textarea {
+	height: 30px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 2px;
+	border-color: #e6e6e6;
+	background-color: #fff;
+
+	outline: 0;
+}
+
+.eova-file>input[type="text"],
+.eova-img>input[type="text"],
+.eova-icons>input[type="text"],
+.eova-info>input[type="text"],
+.eova-time>input[type="text"],
+.eova-find>input[type="text"],
+.eova-combotree>input[type="text"],
+.eova-combo>input[type="text"],
+.eova-text>input[type="text"] {
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 30px;
+	cursor: pointer;
+}
+
+.eova-bool input[type="checkbox"] {
+	width: 20px;
+    vertical-align: middle;
+    margin-right: 195px;/* 临时占位,待后续优化 */
+    display: block!important;
+/*     height: 20px; */
+/*     margin: 6px 27px; */
+}
+
+.eova-texts textarea {
+	padding: 2px 10px;
+	min-height: 25px;
+    min-width: 250px;
+}
+
+.eova-img>i {
+	left: 193px;	
+}
+
+.eova-imgs {
+	margin-left: 110px;
+    width: 555px!important;
+}
+.eova-imgs .upload_box {
+	margin: 0!important;
+}
+
+/* 鼠标移入控件和选中焦点 */
+div[class^="eova"]>input[type="text"]:hover,
+div[class^="eova"]>input[type="text"]:focus {
+	border-color: #D2D2D2 !important;
+}
+
+
+/* 下拉框面板 */
+.eova-combo-panel,
+.eova-combotree-panel {
+	/* overflow: hidden; */
+	/*position: absolute;*/
+	z-index: 99991024;
+	display: none;
+	width: 169px;
+	text-align: left;
+
+	/* min-width: 100%; */
+	border: 1px solid #d2d2d2;
+	max-height: 300px;
+	overflow-y: auto;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+	box-sizing: border-box;
+}
+
+.eova-combo-panel div {
+	font-size: 13px;
+	color: #999;
+	cursor: pointer;
+	padding: 0 10px;
+	line-height: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.eova-combo-panel div:hover {
+	/* background-color: #5FB878;
+	color: #fff; */
+	background-color: #f2f2f2;
+	-webkit-transition: .5s all;
+	transition: .5s all
+}
+
+.eova-combo-selected,
+.eova-combo-selected:hover {
+	background-color: #5FB878 !important;
+	color: #fff !important;
+
+}
+
+.eova-combo-hide {
+	display: none;
+}
+
+/* 下拉框面板 */
+
+/* 时间区间 */
+.eova-times input {
+	width: 99.5px;
+}
+
+/* 布尔框 */
+.eova-bool {
+	position: relative;
+/* 	height: 22px; */
+	line-height: 22px;
+	padding: 0 5px;
+	margin-top: 3px;
+	border: 1px solid #d2d2d2;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: #fff;
+	-webkit-transition: .1s linear;
+	transition: .1s linear;
+	min-height: 20px;
+	
+	min-width: 40px;
+}
+.eova-bool i {
+	position: absolute;
+	left: 5px;
+	top: 3px;
+	width: 16px;
+	height: 16px;
+	border-radius: 20px;
+	background-color: #d2d2d2;
+	-webkit-transition: .1s linear;
+	transition: .1s linear
+}
+
+.eova-bool em {
+	position: relative;
+	top: 0;
+	width: 25px;
+	margin-left: 21px;
+	padding: 0 !important;
+	text-align: center !important;
+	color: #999 !important;
+	font-style: normal !important;
+	font-size: 12px;
+	user-select: none;
+}
+
+.eova-bool.select {
+	border-color: #5FB878;
+	background-color: #5FB878
+}
+
+.eova-bool.select em {
+	border-color: #5FB878;
+	background-color: #5FB878
+}
+
+.eova-bool.select i {
+	left: 100%;
+	margin-left: -21px;
+	background-color: #fff
+}
+
+.eova-bool.select em {
+	margin-left: 5px;
+	margin-right: 21px;
+	color: #fff !important
+}
+
+/* TODO Form 模式占位 */
+.eova-form .eova-form-field .eova-bool {
+	margin-right: 163px;
+}
+/* TODO 单元格模式限制大小 */
+.layui-table-cell .eova-bool {
+	max-width: 50px;
+}
+
+/* 编辑框 */
+.eova-info-text {
+    width: 100%;
+    height: 95%;
+    overflow: auto;
+    
+    border:1px solid #e6e6e6;
+    box-sizing: border-box;
+    resize: none;
+    padding: 5px;
+}
+.eova-info-text:FOCUS{
+    outline: 0;
+}
+
+.eova-num input {
+	width: 50px;
+	text-align: center;
+}
+
+.eova-num span {
+	display: none;
+	line-height: 20px;
+	border: 0px;
+}

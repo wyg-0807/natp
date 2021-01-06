@@ -1,0 +1,50 @@
+<button class="layui-btn layui-btn-sm" onclick="requestRefund()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+  var requestRefund = function () {
+    var ID = '${gridId}';
+
+    var rows = getSelectRows(ID);
+    if (rows.length === 0) {
+        $.msg('请选择一行数据');
+        return;
+    }
+
+    var row = rows[0];
+
+    if (!row['hisReceiptNo']) {
+        $.msg('HIS退费单号为空，表明HIS尚未成功退费，不能发起微信退款');
+        return;
+    }
+
+    if (row['refundSuccessTime']) {
+        $.msg('存在退款成功时间，表明微信已成功退款，不能发起微信退款');
+        return;
+    }
+
+    if (row['manualWxRefundState'] !== '未发起') {
+        $.msg('已发起微信退款，请勿重复操作');
+        return;
+    }
+
+
+    layer.confirm(
+        '请谨慎！只有HIS退款成功，并且微信退款失败的情况下，才能执行这个操作！您确定继续吗？',
+        {icon: 7, title: '严重警告'},
+        function (index) {
+          $.post('/wxmprefund/requestRefund', {outRefundNo: rows[0]['outRefundNo']}, function (res) {
+            if (res.state === 'ok') {
+              layer.alert(res.msg || '操作成功');
+              $.tableReLoad(ID);
+            } else {
+              layer.alert(res.msg, {title: '警告', icon: 7});
+            }
+          });
+
+          layer.close(index);
+        }
+    );
+  };
+
+</script>

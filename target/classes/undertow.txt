@@ -1,0 +1,18 @@
+undertow.devMode=false
+undertow.port=9000
+undertow.host=0.0.0.0
+undertow.resourcePath=src/main/webapp
+undertow.hotSwapClassPrefix=com.eova,com.jfinal,org.beetl,live.autu.plugin.jfinal.swagger
+# gzip 压缩开关
+undertow.gzip.enable=true
+# 配置压缩级别，默认值 -1。 可配置 1 到 9。 1 拥有最快压缩速度，9 拥有最高压缩率
+undertow.gzip.level=1
+# 触发压缩的最小内容长度
+undertow.gzip.minLength=1024
+# session 过期时间，注意单位是秒
+undertow.session.timeout=1800
+# 支持 session 热加载，避免依赖于 session 的登录型项目反复登录，默认值为 true。仅用于 devMode，生产环境无影响
+undertow.session.hotSwap=true
+
+undertow.accessLog.format=%t %a [%r] %s %D
+undertow.accessLog.directory=./logs

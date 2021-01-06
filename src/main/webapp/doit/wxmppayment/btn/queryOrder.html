@@ -1,0 +1,31 @@
+<button class="layui-btn layui-btn-sm" onclick="queryOrder()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+  var queryOrder = function(){
+    var ID = '${gridId}';
+
+    var rows = getSelectRows(ID);
+    if (rows.length === 0) {
+      $.msg('请选择一行数据');
+      return;
+    }
+
+    $.getJSON('/wxmppayment/queryOrder', {outTradeNo: rows[0]['outTradeNo']}, function (res) {
+      $.tableReLoad(ID);
+      layer.open({
+        type: 1,
+        skin: 'layui-layer-rim',
+        area: ['80%', '80%'],
+        title: '查询微信订单',
+        content: '<pre class="layui-code" lay-title="JSON" lay-encode="true">' + JSON.stringify(res, null, 4) + '</pre>',
+        success: function() {
+          layui.use('code', function () {
+            layui.code();
+          });
+        }
+      });
+    });
+  };
+
+</script>

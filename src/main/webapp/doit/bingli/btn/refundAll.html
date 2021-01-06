@@ -1,0 +1,38 @@
+<button class="layui-btn layui-btn-sm" onclick="setRemark()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+
+<script type="text/javascript">
+    var setRemark = function () {
+        var ID = '${gridId}';
+
+        var rows = getSelectRows(ID);
+        if (rows.length === 0) {
+            $.msg('请选择一行数据');
+            return;
+        }
+
+        if (rows[0]['status_val'] !== 9) {
+            $.msg('只有已取消的申请，才能退还全部费用');
+            return;
+        }
+
+        var payStateVal = rows[0]['payState_val'];
+        if (payStateVal !== 1) {
+            $.msg('该申请未付款或已退款，不能退还全部费用');
+            return;
+        }
+
+        $.post('/bingli/refundAll', {id: rows[0]['id']}, function (ret) {
+            if (ret.state === 'ok') {
+                layer.msg(ret.msg || '操作成功');
+                $.tableReLoad(ID);
+            } else {
+                layer.alert(ret.msg, {
+                    title: '警告',
+                    icon: 7
+                });
+            }
+        });
+    }
+</script>

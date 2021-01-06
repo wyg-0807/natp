@@ -1,0 +1,10 @@
+<!--#// 新窗口打开通用按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+	<i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_btn_${button.id} = function() {
+	var url = "${button.uri!}";
+    window.open(url);
+};
+</script>

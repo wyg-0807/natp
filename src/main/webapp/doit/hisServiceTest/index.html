@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HIS 服务测试</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/eova/plugins/layui/dist/css/layui.css">
+    <link rel="stylesheet" href="/eova/plugins/jsoneditor/jsoneditor.min.css">
+</head>
+<body>
+<div class="layui-fluid layui-form">
+    <div class="layui-form-item" style="margin-top: 15px">
+        <label class="layui-form-label">选择服务</label>
+        <div class="layui-input-block" id="methodRadios">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">输入参数</label>
+        <div class="layui-input-block" id="paramEditor" style="height: 500px;"></div>
+    </div>
+    <div class="layui-form-item" style="margin-top: 15px;">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="test">测试</button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">输出结果</label>
+        <div class="layui-input-block" id="retEditor" style="height: 500px;"></div>
+    </div>
+</div>
+<script type="text/javascript" src="/eova/plugins/layui/dist/layui.js"></script>
+<script type="text/javascript" src="/eova/plugins/jsoneditor/jsoneditor.min.js"></script>
+<script type="text/javascript" src="/doit/hisServiceTest/his_services.js"></script>
+<script type="text/html" id="methodRadiosTemplate">
+{{# layui.each(d.services, function (index, item) { }}
+<input type="radio" name="method" value="{{item.method}}" title="{{item.description}}（{{item.method}}）" lay-filter="method">
+{{# }); }}
+</script>
+<script>
+    layui.use(['form', 'laytpl', 'layer'], function () {
+        var form = layui.form
+            , laytpl = layui.laytpl
+            , layer = layui.layer
+            , $    = layui.$
+        ;
+
+        var methodRadiosTemplate = $('#methodRadiosTemplate').html();
+        laytpl(methodRadiosTemplate).render({"services": services}, function (html) {
+            $('#methodRadios').html(html);
+            form.render();
+        });
+
+        var paramEditor = new JSONEditor(document.getElementById("paramEditor"), { mode: 'form'});
+        paramEditor.set({});
+
+        var retEditor = new JSONEditor(document.getElementById("retEditor"), { mode: 'code', modes: ['view', 'code']});
+        retEditor.set({});
+
+        form.on('radio(method)', function (data) {
+            var method = data.value;
+            var service = services.find(function (item) {
+                return item.method === method;
+            });
+            paramEditor.set(service.paramTemplate);
+        });
+
+        form.on('submit(test)', function (formData) {
+            var loadLayer = layer.load();
+
+            var fields = formData.field;
+            fields.params = JSON.stringify(paramEditor.get());
+            retEditor.set({});
+            $.ajax({
+                url: '/hisServiceTest/execute'
+                , type: 'post'
+                , data: fields
+                , success: function (resp) {
+                    retEditor.set(resp);
+                    layer.close(loadLayer);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

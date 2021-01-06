@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eova Find</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="/eova/plugins/layui/dist/css/layui.css">
+    <link rel="stylesheet" href="/eova/plugins/eova/theme/layui/eova.css?v=2.1.1">
+    <link rel="stylesheet" href="/eova/ui/css/eova.layout.css?v=2.1.1">
+    <link rel="stylesheet" href="/eova/plugins/eova/theme/icon/icon.css?v=2.1.1">
+
+    <link rel="stylesheet" href="/eova/plugins/easyui/themes/gray/easyui.css">
+    <link rel="stylesheet" href="/eova/plugins/ztree/css/metroStyle/metroStyle.css">
+
+    <script type="text/javascript" src="/eova/ui/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/eova/ui/js/json2-min.js"></script>
+
+    <script type="text/javascript" src="/eova/plugins/layui/dist/layui.js"></script>
+    <script type="text/javascript" src="/eova/ui/js/common.js?v=2.1.1"></script>
+    <script type="text/javascript" src="/eova/ui/js/table.js?v=2.1.1"></script>
+
+    <script type="text/javascript" src="/eova/plugins/eova/i18n/zh_CN.js"></script>
+    <script type="text/javascript" src="/eova/plugins/eova/eova.min.js?v=2.1.1"></script>
+    <script type="text/javascript" src="/eova/plugins/eova/copyright/eova.defense.min.js?v=2.1.1"></script>
+
+    <script type="text/javascript" src="/eova/plugins/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/eova/plugins/ztree/js/jquery.ztree.all.min.js"></script>
+    <script>
+	layui.config({
+		base: '/eova/plugins/layui/' //静态资源所在路径
+	}).extend({
+	});
+
+	// 手工获得全局layer,不用use,方便直接使用
+	var layer;
+	layui.use('layer', function() {
+		layer = layui.layer;
+	});
+
+    </script>
+</head>
+<body>
+<div class="eova-layout" style="width: calc(100% - 10px); height: calc(100% - 10px); margin: 5px;">
+    <div class="zone" style="width: 100%; height: 100%;">
+        <div class="box" style="height: 85px;">
+
+            <form class="eova-form" id="queryFindForm" onsubmit="return false;">
+                <div class="eova-form-field">
+                    <label class="eova-form-label">工号</label>
+                    <div class="eova-text" id="no" name="query_no" value="" data-options=""></div>
+                </div>
+                <div class="eova-form-field">
+                    <label class="eova-form-label">姓名</label>
+                    <div class="eova-text" id="name" name="query_name" value="" data-options=""></div>
+                </div>
+            </form>
+        </div>
+        <div class="box" style="height: calc(100% - 5px - 85px); top: calc(5px + 85px)">
+
+            <div class="layui-btn-container" id="toolbar" style="display: none;">
+                <button class="layui-btn layui-btn-sm layui-btn-normal" onclick="queryFun()">
+                    <i class="layui-icon">&#xe615;</i> 快速查询
+                </button>
+            </div>
+            <script type="text/javascript">
+	document.onkeydown = function(e){
+		if (e.keyCode === 13){
+			queryFun();
+		}
+	};
+
+	var queryFun = function(){
+
+		var paras = $.getFormParasObj($('#queryFindForm'));
+
+    	layui.use(['table', 'form'], function () {
+    		var table = layui.table;
+
+    		table.reload('findTable', {
+    		  where: paras
+    		});
+    	});
+	};
+
+            </script>
+            <table id="findTable" lay-filter="findTable"></table>
+            <script>
+var findTableIns;// Layui Table 对象实例
+$(function () {
+    // init param
+    var ID = "findTable";
+    var PID = "";
+    var $grid = $("#" + ID);
+    var $parentWidget;
+    if(PID != ""){
+    	$parentWidget = $("#" + PID);
+    }
+
+    // 离线数据模式
+    var isData = false;
+
+    var menuCode = '';
+    var objectCode = '';
+    var toolbar = 'toolbar';// grid ref toolbar
+    var isPaging = eval('true');// is show pagination
+    var url = '/widget/findJson?eova_code=order&eova_field=nurseno';// diy grid load data url
+    var height = '';// diy grid load data url
+
+    var objectJson = '{"biz_intercept":"","cn":"no","code":"meta_template","config":"{\"cacheNames\": [\"service\"]}","data_source":"main","default_order":null,"diy_card":null,"diy_js":null,"filter":null,"id":1,"is_celledit":false,"is_first_load":true,"is_show_num":true,"is_single":true,"name":"","pk_name":"id","table_name":"eova_template","view_name":null,"view_sql":null}'.replace('"{', '{').replace('}"', '}');// object is json
+    var fieldsJson = '[{"add_status":50,"cn":"id","config":"","data_decimal":0,"data_size":255,"data_type":12,"data_type_name":"VARCHAR","defaulter":"","en":"id","exp":"","fieldnum":0,"fieldset":"","formatter":"","height":20,"is_add":true,"is_auto":false,"is_disable":false,"is_edit":true,"is_multiple":false,"is_order":true,"is_query":false,"is_required":true,"is_show":false,"is_update":true,"object_code":"eova_meta_template","order_num":1,"placeholder":"","table_name":"","type":"文本框","update_status":50,"validator":"","width":120},{"add_status":50,"cn":"工号","config":"","data_decimal":0,"data_size":255,"data_type":12,"data_type_name":"VARCHAR","defaulter":"","en":"no","exp":"","fieldnum":0,"fieldset":"","formatter":"","height":20,"is_add":true,"is_auto":false,"is_disable":false,"is_edit":true,"is_multiple":false,"is_order":true,"is_query":true,"is_required":true,"is_show":true,"is_update":true,"object_code":"eova_meta_template","order_num":2,"placeholder":"","table_name":"","type":"文本框","update_status":50,"validator":"","width":120},{"add_status":50,"cn":"姓名","config":"","data_decimal":0,"data_size":255,"data_type":12,"data_type_name":"VARCHAR","defaulter":"","en":"name","exp":"","fieldnum":0,"fieldset":"","formatter":"","height":20,"is_add":true,"is_auto":false,"is_disable":false,"is_edit":true,"is_multiple":false,"is_order":true,"is_query":true,"is_required":true,"is_show":true,"is_update":true,"object_code":"eova_meta_template","order_num":3,"placeholder":"","table_name":"","type":"文本框","update_status":50,"validator":"","width":120}]';// fiedlds is json
+    var configJson = '';// config is json
+    var paras = $.getUrlParas();
+    // 自动传递所有参数
+    // 是否含有关联查询条件
+    if(paras && (paras.indexOf('query_') != -1 || paras.indexOf('filter_') != -1)){
+    	url = url + '?' + paras;
+    }
+
+	// 初始化组件
+	EovaWidget.init(objectCode, objectJson, fieldsJson, configJson);
+    var config = EovaWidget.data.config,
+    	object = EovaWidget.data.object,
+    	fields = EovaWidget.data.fields;
+
+    // 当前对象是否允许初始加载数据
+    var isFirstLoad = false;
+    var isFirstLoadNow = eval('true');
+	// 必须当前业务和对象都允许加载数据
+    if(isFirstLoadNow && object.is_first_load){
+    	isFirstLoad = true;
+    }
+
+    var cols = [];
+    // var validators = {};
+
+    // 构建首列
+    $.table.buildFirstColumn(object, fields, cols);
+    // 构建其它列
+    $.table.buildColumn(object, fields, cols);
+
+    layui.use(['table', 'form'], function () {
+    	var table = layui.table,
+    		form = layui.form;
+
+    	tableIns = table.render({
+    		id: ID,
+    		elem: '#' + ID,
+    		toolbar: '#' + toolbar,
+    		url: url,
+    		cols: [cols],
+    		loading: true,
+    		isFirstLoad: isFirstLoad,
+    		title: object.name,
+    		limits: [15,30,50,100,200,500,1000,2000],
+    		limit: isPaging ? 15 : 50000,
+    		page: isPaging,
+    		autoSort: false,
+    		// hide: true,
+    		totalRow: config.totalRow || false ,
+    		height: height,
+    		text: {
+    			none: '暂无相关数据'
+    		},
+
+    		defaultToolbar: ['filter', 'print', 'exports'],
+    		done: function(res, curr, count){
+    			// 数据加载成功回调
+    			try {findTableDone(res, curr, count);} catch(e) {}
+
+    			// 控件初始化
+    		    $.initEovaUI();
+    		    $.table.process(ID, objectCode);
+    		}
+    	});
+
+    	// 监听排序事件
+    	table.on('sort(' + ID + ')', function(obj){
+    		table.reload(ID, {
+	    	    initSort: obj, //记录初始排序，如果不设的话，将无法标记表头的排序状态。
+	    	    where: { //请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）
+	    	      field: obj.field, //排序字段
+	    	      order: obj.type //排序方式
+	    	    }
+			});
+    	});
+
+    	// 单击选中当前行
+		table.on('row(' + ID + ')', function(obj) {
+			// 单选模式,单击行选中
+			if (object.is_single) {
+				table.checkRow(ID, obj.index);
+			}
+		});
+
+    	// table实例对象外放,方便页面内使用
+		findTableIns = tableIns;
+    });
+});
+
+            </script>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/eova/ui/js/operation.js"></script>
+<script>
+var ID = 'findTable';
+
+// Table初始化选中
+function findTableDone(res, curr, count) {
+	// 初始值选中
+	var val = "";
+	if(val && val != ''){
+		var vals = val.split(',');
+		$.each(res.data, function(i, o) {
+			$.each(vals, function(iv, val) {
+				if(o.id == val){
+					layui.use([ 'table' ], function() {
+						var $ = layui.$, table = layui.table;
+						// 选中行
+						table.checkRow(ID, i);
+					});
+				}
+			});
+		});
+	}
+}
+
+// 双击快速选择
+layui.use([ 'table' ], function() {
+	var $ = layui.$, table = layui.table;
+
+	// 双击选中值并点击确认
+	table.on('rowDouble(' + ID + ')', function(obj) {
+		// 选中当前行
+		table.checkRow(ID, obj.index);
+		// 模拟点击确认
+		parent.$('.layui-layer-btn0').click();
+	});
+});
+
+var btnSaveCallback = function($dialog, ID, $$) {
+    var ids = '${ids}';
+	var rows = layui.table.checkStatus('findTable').data
+	if (rows.length === 0) {
+	    $.msg('请选择护士');
+	    return;
+	}
+
+	$.post('/order/doAssignNurse', {
+	    'ids': ids,
+	    'nurseId': rows[0]['id']
+	}, function (res) {
+	    if (res.state === 'ok') {
+			$$.msg('操作成功！');
+			parent.layui.table.reload('grid');
+			$.dialogClose(parent.layer, window);
+		} else {
+			$$.error(result.msg||'操作失败！');
+		}
+	}, 'json');
+};
+
+</script>
+</body>
+</html>

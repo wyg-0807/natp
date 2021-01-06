@@ -1,0 +1,10 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_task_start()">
+	<i class="layui-icon eova-icon-triangle-r"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_task_start = function() {
+	var ID = '${gridId}';
+    var val = getSelectVal(ID, 'id');
+	tableConfirm(ID, '您确定启动任务？', '将在60s内启动任务，启动后自动补偿执行60s内应该触发的次数', '/task/start/' + val, '操作成功');
+};
+</script>

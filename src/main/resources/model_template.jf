@@ -1,0 +1,46 @@
+package #(modelPackage)
+
+import cn.doit.natp.common.Strings
+import com.jfinal.plugin.activerecord.Model
+import com.jfinal.plugin.activerecord.Page
+
+#set(tableName = tableMeta.name)
+#set(className = tableMeta.modelName)
+
+class #(className): Model<#(className)>() {
+
+    companion object {
+        const val TABLE = "#(tableName)"
+        val DAO: #(className) = #(className)().use(Strings.DS_MAIN).dao()
+
+        fun paginate(pageNumber: Int, pageSize: Int): Page<#(className)> =
+            DAO.paginate(pageNumber, pageSize, "select *", "from `$TABLE`")
+
+        fun findList(attrName: String, attrValue: Any): List<#(className)> =
+                DAO.find("select * from `$TABLE` WHERE `$attrName`=?", attrValue)
+
+        fun findOne(attrName: String, attrValue: Any): #(className)? =
+                DAO.findFirst("select * from `$TABLE` WHERE `$attrName`=? limit 1", attrValue)
+
+        fun exists(attrName: String, attrValue: Any) =
+                findOne(attrName, attrValue) != null
+    }
+
+#for(columnMeta: tableMeta.columnMetas)
+    #if(columnMeta.remarks)
+    /**
+     * #(columnMeta.remarks)
+     */
+    #end
+    #set(fieldName = columnMeta.attrName)
+    #set(fieldType = kotlinTypeMap.getOrDefault(columnMeta.javaType, columnMeta.javaType))
+    #set(getter = getterMap.getOrDefault(fieldType, "get"))
+    var #(fieldName): #(fieldType)
+        get() = #(getter)("#(fieldName)")
+        set(value) {
+            set("#(fieldName)", value)
+        }
+
+#end
+
+}

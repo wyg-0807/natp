@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>${APP.name!'新疆医科大学第一附属医院昌吉分院'}</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="/eova/plugins/layui/dist/css/layui.css" media="all">
+  <style>
+    .layui-fluid {
+      padding: 15px;
+    }
+
+    .layui-card-header {
+      padding: 15px;
+    }
+
+    #chart {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+<div class="layui-fluid">
+  <div class="layui-card">
+    <!--搜索工具栏-->
+    <div class="layui-form layui-card-header" id="search-form">
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label" for="range_ctime">清算日期</label>
+          <div class="layui-input-inline">
+            <input type="text" class="layui-input laydate" id="range_ctime" name="range_ctime"
+                   placeholder="请选择清算日期">
+          </div>
+        </div>
+        <div class="layui-inline">
+          <button class="layui-btn" lay-submit lay-filter="search-button">
+            <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-card-body">
+      <div class="layui-row">
+        <div class="layui-col-sm12">
+          <div id="chart"><i class="layui-icon layui-icon-loading1"></i></div>
+        </div>
+      </div>
+      <div class="layui-row">
+        <div class="layui-col-sm12">
+          <table id="table" layui-filter="table"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/eova/plugins/layui/dist/layui.js"></script>
+<script src="/eova/plugins/echarts/echarts.min.js"></script>
+<script src="/eova/plugins/moment.min.js"></script>
+<script src="/eova/plugins/math.min.js"></script>
+<script>
+  layui.use(['form', 'laydate', 'table'], function () {
+    var form      = layui.form
+        , laydate = layui.laydate
+        , $       = layui.$
+        , table   = layui.table;
+
+    $('#search-form .laydate').each(function () {
+      laydate.render({
+        elem: this
+        , range: true
+      });
+    });
+
+    form.on('submit(search-button)', function (data) {
+      var range_ctime = data.field.range_ctime || '';
+      range_ctime     = range_ctime.trim();
+      if ((range_ctime)) {
+        var items = range_ctime.replace(' - ', ',').split(',');
+        var d1    = moment(items[0]);
+        var d2    = moment(items[1]);
+        if (d1.add(36, 'months') <= d2) {
+          top.layer.alert('日期范围不得超过一个月', {title: '警告', icon: 7});
+          return;
+        }
+
+        reloadPage({startDate: items[0], endDate: items[1]});
+      } else {
+        reloadPage({});
+      }
+    });
+
+    var buildEchartsOtpions = function (records) {
+          var days = [], wx_pay_amounts = [], wx_refund_amounts = [];
+
+          for (var i = 0; i < records.length; i++) {
+            var record = records[i];
+            days.push(record.date);
+            wx_pay_amounts.push(record['wx_pay_amount']);
+            wx_refund_amounts.push(record['wx_refund_amount']);
+          }
+
+          return {
+            tooltip: {
+              trigger: 'axis'
+            }
+            , calculable: true
+            , legend: {
+              data: ['微信充值', '微信退款']
+            }
+            , xAxis: [{
+              type: 'category'
+              ,
+              data: days
+            }]
+            , yAxis: [{
+              type: 'value'
+            }]
+            , series: [
+              {
+                name: '微信充值'
+                , type: 'bar'
+                , data: wx_pay_amounts
+              }
+              , {
+                name: '微信退款'
+                , type: 'bar'
+                , data: wx_refund_amounts
+              }
+            ]
+            , toolbox: {
+              show: true,
+              feature: {
+                saveAsImage: {
+                  show: true,
+                  excludeComponents: ['toolbox'],
+                  pixelRatio: 2
+                }
+              }
+            }
+          };
+        },
+        renderEcharts       = function (options) {
+          var chart = echarts.init($('#chart').get(0));
+          chart.setOption(options);
+          window.onresize = chart.resize;
+        },
+        renderTable         = function (records) {
+          var wxPaySum = math.bignumber(0), wxRefundSum = math.bignumber(0);
+          records.forEach(function (it) {
+            wxPaySum = math.add(wxPaySum, math.bignumber((it["wx_pay_amount"])));
+            wxRefundSum = math.add(wxRefundSum, math.bignumber(it["wx_refund_amount"]));
+          });
+          var sumRow = {
+            "date": "合计",
+            "wx_pay_amount": wxPaySum,
+            "wx_refund_amount": wxRefundSum
+          };
+          records.unshift(sumRow);
+          records.push(sumRow);
+
+          table.render({
+            elem: '#table'
+            , height: 400
+            , page: false
+            , limit: 800
+            , toolbar: 'true'
+            , defaultToolbar: ['exports', 'print']
+            , cols: [[
+              {field: 'date', title: '日期', align: 'center'}
+              , {field: 'wx_pay_amount', title: '微信支付金额', align: 'center'}
+              , {field: 'wx_refund_amount', title: '微信退款金额', align: 'center'}
+            ]]
+            , data: records
+          });
+        },
+        reloadPage          = function (params) {
+          $.getJSON('/stat/paymentByDay/data', params, function (res) {
+            var records = res.records;
+            renderEcharts(buildEchartsOtpions(records));
+            renderTable(records);
+          });
+        };
+
+    reloadPage({});
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<button class="layui-btn layui-btn-sm" onclick="addDeposit()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+    var addDeposit = function () {
+        var ID = '${gridId}';
+
+        var rows = getSelectRows(ID);
+        if (rows.length === 0) {
+            $.msg('请选择一行数据');
+            return;
+        }
+
+        var row = rows[0];
+        if (row['type'] !== '门诊' && row['type'] !== '住院') {
+            $.msg('只有门诊或住院类型的订单，才能发起HIS充值');
+            return;
+        }
+
+        // if (!row['transactionId']) {
+        //     $.msg('微信订单号为空，表明商户号尚未收到患者付款，不能发起HIS充值');
+        //     return;
+        // }
+
+        if (row['hisReceiptNo']) {
+            $.msg('存在HIS收据号，表明钱款已充入患者就诊卡，不能发起HIS充值');
+            return;
+        }
+
+        if (row['manualhispaystate'] !== '未发起') {
+            $.msg('已发起HIS充值，请勿重复操作');
+            return;
+        }
+
+        layer.confirm(
+            '请谨慎！只有微信付款成功，并且HIS充值失败的情况下，才能执行这个操作！您确定继续吗？',
+            {icon: 7, title: '严重警告'},
+            function (index) {
+                $.post('/wxmppayment/addDeposit', {outTradeNo: row['outTradeNo']}, function (res) {
+                    if (res.state === 'ok') {
+                        layer.alert(res.msg || '操作成功');
+                        $.tableReLoad(ID);
+                    } else {
+                        layer.alert(res.msg, {title: '警告', icon: 7});
+                    }
+                });
+
+                layer.close(index);
+            }
+        );
+    };
+
+</script>

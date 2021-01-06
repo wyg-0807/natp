@@ -1,0 +1,31 @@
+<!--#// 后台执行逻辑并刷新通用按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+	<i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+	var eova_btn_${button.id} = function(){
+	    
+		var ID = '${gridId}';
+		
+        layer.confirm($.I18N('您确认执行当前操作'), {
+			title : $.I18N('操作提示'),
+			icon : 3,
+			btn : [ '确定', '取消' ]
+		}, function(confirmLayer) {
+        	layer.close(confirmLayer);
+        	var loadLayer = layer.load();
+			$.post('${button.uri!}', {}, function(result, status) {
+				layer.close(loadLayer);
+				if (result.success) {
+					$.msg($.I18N('操作成功'));
+					$.tableReLoad(ID);
+					$.dialogClose(layer, window);
+				} else {
+					$.alert(result.msg);
+				}
+			});
+			// TODO 刷新组件
+			//$.widgetClearSelections($widget);
+		});
+	};
+</script>

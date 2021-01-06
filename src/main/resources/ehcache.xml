@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false">
+
+  <diskStore path="java.io.tmpdir"/>
+
+  <defaultCache
+      maxEntriesLocalHeap="10000"
+      overflowToDisk="false"
+      timeToIdleSeconds="1800"
+      copyOnWrite="true"
+      copyOnRead="true">
+  </defaultCache>
+
+  <cache name="service"
+         maxEntriesLocalHeap="1"
+         timeToLiveSeconds="1"
+         timeToIdleSeconds="1">
+  </cache>
+</ehcache>

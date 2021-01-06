@@ -1,0 +1,36 @@
+<!--#var body = {
+	var formId = 'detailForm' + object.code;
+-->
+
+<body>
+
+<#form id="${formId}" objectCode="${object.code}" data="${record!}" />
+
+<script type="text/javascript">
+
+$(function(){
+	// 禁用表单，注销事件，仅供查看
+	$(document).ready(function(){
+		$(this).find('input,select,textarea').attr('disabled',true);
+		$(this).find('input,select,textarea').attr('readonly',true);
+		//$(this).find('textarea').css('background-color','rgb(235, 235, 228)');
+		$(this).find('input,i,div').unbind();
+        $('.eova-img').remove();
+        $('.eova-icon').remove();
+		$('.status_bar').remove();
+		$('.upload_choose').remove();
+		$('.jsoneditor-menu').remove();
+		$('.wangEditor-menu-container').remove();
+	});
+});
+
+var btnSaveCallback = function($dialog, ID, $pjq) {
+};
+var EOVA_FORM = "detail";
+</script>
+
+<!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}-->
+
+<!--#};include("/eova/layout/form.html",{'title' : object.name + ' detail', 'layoutContent' : body, 'isEditor' : true}){}-->

@@ -1,0 +1,127 @@
+<!--#var body = {
+var tree = menu.config.tree;
+-->
+
+<div class="eova-layout" style="width: calc(100% - 20px); height: calc(100% - 20px); margin: 10px;">
+	<div class="zone" style="width: 100%; height: 100%;">
+		<div class="box" style="width: 250px;overflow: auto;">
+
+			<#tree id="master_tree" menuCode="${menu.code}" objectCode="${object.code}" idKey="${tree.idField}" nameKey="${tree.treeField}" pidKey="${tree.parentField}" iconKey="${tree.iconField!}" rootPid="${tree.rootPid}" expandAll="true" check="true" edit="${isEmpty(tree.orderField!) ? false : true }" />
+		
+		</div>
+		<div class="zone" style="width: calc(100% - 10px - 250px); left: calc(10px + 250px);">
+			<div class="box" style="height: 30px;">
+				
+				<!--#
+				var parentId = 'treegrid';
+				var queryId = 'queryForm';
+				-->
+				
+				<div class="layui-btn-container" id="toolbar" style="">
+					<!--#if(!isEmpty(btnList!)){-->
+						<!--#for(btn in btnList){-->
+							<!--#include(btn.ui,{'menu': menu, 'object': object, 'button': btn, 'gridId': parentId}){}-->
+						<!--#}-->
+					<!--#}-->
+
+					<!--#if(session.user.isAdmin){-->
+						<!--#include("/eova/button/btn/quick.html",{'menu': menu}){}-->
+					<!--#}-->
+				</div>
+			
+			</div>
+			<div class="box" style="height: calc(100% - 10px - 30px); top: calc(30px + 10px)">
+				<iframe id="formFrame" src="/eova/template/singletree/default.htm" allowtransparency="true" style="border: 0; width: 100%; height: 100%;" frameborder="0">
+				</iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<!--#if(!isEmpty(menu.diy_js!)){-->
+<script type="text/javascript" src="${menu.diy_js}"></script>
+<!--#}-->
+<!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}-->
+
+<script>
+// 本页面全局变量
+var singletree = {
+	menuCode: '${menu.code}',
+	idField : '${tree.idField}',
+	parentField : '${tree.parentField}',
+	treeField : '${tree.treeField}',
+	rootValue : '${tree.rootPid}',
+	tree : undefined, // 树的对象实例
+	selectNode : undefined,// 当前选中节点
+};
+
+// 获取勾选数据
+function getCheckedNodes(){
+	return singletree.tree.getCheckedNodes(true);
+}
+
+// 节点点击事件
+function nodeClick(e, treeId, node) {
+	singletree.selectNode = node;
+	var idField = singletree.idField;
+	// 默认编辑
+	var url = $.str.format('/form/update/${object.code}-{0}', node[idField]);
+	$('#formFrame').attr('src' , url);
+};
+
+// 节点拖拽完成之前
+// moveType "inner"：成为子节点，"prev"：成为同级前一个节点，"next"：成为同级后一个节点
+function nodeBeforeDrop(treeId, treeNodes, targetNode, moveType) {
+	if(treeNodes.length > 1){
+		$.msg('每次只能拖拽一个节点');
+		return false;
+	}
+	
+	// 获取被拖拽节点
+	var sourceNode = treeNodes[0];
+	var sid = sourceNode[(singletree.idField)];
+	var sname = sourceNode[(singletree.treeField)];
+	
+	var tid = 'root';
+	var tname = '根节点';
+	if(targetNode){
+		var tid = targetNode[(singletree.idField)];
+		var tname = targetNode[(singletree.treeField)];
+	}
+	
+	if (sid == tid) {
+		return false;
+	}
+	
+	var flag = false;
+	$.syncGetJson($.str.format('/single_tree/drag/{0}-{1}-{2}-{3}', singletree.menuCode, moveType, sid, tid), function(o) {
+		if(o.success){
+			$.msg($.str.format('移动成功:{0} -> {1}', sname, tname));
+			flag = true;
+		} else {
+			$.alert(o.msg);
+		}
+	});
+    
+	return flag;
+};
+
+$(function(){
+	singletree.tree = $.fn.zTree.getZTreeObj("master_tree");
+	// 回调事件绑定
+	singletree.tree.setting.callback.onClick = nodeClick;
+	singletree.tree.setting.callback.beforeDrop = nodeBeforeDrop;
+});
+</script>
+
+<!--#// 超级管理员快捷功能入口-->
+<!--#if(session.user.isAdmin){-->
+<ul class="layui-fixbar">
+	<li class="layui-icon layui-icon-util" onclick="dialog(null, '修改菜单', '/form/update/eova_menu_code-${menu.id!}', 720, 615)" title="快速配置菜单"></li>
+</ul>
+<!--#}-->
+
+<!--#};include("/eova/layout/form.html",{'title' : object.name, 'layoutContent' : body, 'isEditor' : true}){}-->

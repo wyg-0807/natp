@@ -1,0 +1,32 @@
+<button class="layui-btn layui-btn-sm" onclick="setRemark()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+
+<script type="text/javascript">
+    var setRemark = function () {
+        var ID = '${gridId}';
+
+        var rows = getSelectRows(ID);
+        console.log(rows);
+        if (rows.length !== 1) {
+            $.msg('有且只能选择一条记录。');
+            return;
+        }
+        if (rows[0]['status_val'] !== 0) {
+            $.msg('只能操作处于【待受理】状态下的病例申请记录。');
+            return;
+        }
+
+        $.post('/bingli/handle', {id: rows[0]['id']}, function (ret) {
+            if (ret.state === 'ok') {
+                layer.msg(ret.msg || '操作成功');
+                $.tableReLoad(ID);
+            } else {
+                layer.alert(ret.msg, {
+                    title: '警告',
+                    icon: 7
+                });
+            }
+        });
+    }
+</script>

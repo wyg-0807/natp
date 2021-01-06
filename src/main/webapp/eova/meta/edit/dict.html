@@ -1,0 +1,14 @@
+<button class="layui-btn layui-btn-sm" onclick="eovaDict()">
+	<i class="layui-icon layui-icon-read"></i> 编辑字典
+</button>
+<script type="text/javascript">
+    var eovaDict = function () {
+		var ID = '${gridId}';
+		
+		if (isSelected(ID)) {
+	        var row = getSelectRow(ID);
+		    window.open('/single_grid/list/eova_dict?query_v_object_code='+ row.object_code_val +'&query_field=' + row.en);
+	        return;
+	    }
+    }
+</script>

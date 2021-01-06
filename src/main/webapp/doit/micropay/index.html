@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>微信付款码支付</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.0/lib/theme-chalk/index.css"
+          integrity="sha256-yVTW9xCJU33Zk7eRRyGSvSDNvinNcd/rit+Nwk9hED0=" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+        }
+
+        #app {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-form ref="form" :model="form" label-position="left" label-width="80px" v-loading="isLoading"
+             element-loading-text="正在请求中...">
+        <el-form-item label="卡号">
+            <el-input v-model="form.cardNo" placeholder="患者就诊卡号" prefix-icon="el-icon-user-solid" clearable
+                      autofocus></el-input>
+        </el-form-item>
+        <el-form-item label="付款码">
+            <el-input v-model="form.qrCode" placeholder="微信付款码" prefix-icon="el-icon-mobile" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="金额(元)">
+            <el-input-number v-model="form.amount" :precision="2" :step="1" :max="99999"></el-input-number>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="onSubmit">立即充值</el-button>
+            <el-button @click="exit">取消</el-button>
+        </el-form-item>
+    </el-form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+        integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.0/lib/index.js"
+        integrity="sha256-n2bLFl278BFBjP+KJ3gB/gqoZIS4mAnuaCWuubCjRJk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js"
+        integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isLoading: false,
+            form: {
+                cardNo: "",
+                amount: 100,
+                qrCode: ""
+            }
+        },
+        methods: {
+            getFormData: function () {
+                var form = this.form;
+                var formData = new URLSearchParams();
+                var amount = (form.amount * 100).toFixed(0);
+                formData.append("cardNo", form.cardNo);
+                formData.append("amount", amount);
+                formData.append("qrCode", form.qrCode);
+                return formData
+            },
+            onSubmit: function () {
+                var that = this;
+                this.isLoading = true;
+                axios({
+                    method: 'post',
+                    url: '/micropay/pay',
+                    data: this.getFormData(),
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                }).then(function (res) {
+                    //handle success
+                    that.isLoading = false;
+                    if (res.data.state === 'ok') {
+                        parent.layer.msg('充值成功');
+                        that.exit();
+                    } else {
+                        parent.layer.msg(res.data.msg);
+                    }
+                    console.log(res);
+                }).catch(function (response) {
+                    //handle error
+                    that.isLoading = false;
+                    console.log(response);
+                });
+            },
+            exit: function () {
+                var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                parent.layer.close(index); //再执行关闭
+            }
+        },
+        watch: {
+            form: (newFrom, oldFrom) => {
+                this.form.amount = newFrom.form.amount.toFixed(2)
+            }
+        }
+    })
+</script>
+</body>
+</html>

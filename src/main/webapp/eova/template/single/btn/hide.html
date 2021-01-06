@@ -1,0 +1,9 @@
+<button class="layui-btn layui-btn-sm" onclick="singleHide()">
+	<i class="layui-icon layui-icon-delete"></i> ${button.name!'隐藏'}
+</button>
+<script type="text/javascript">
+	var singleHide = function() {
+		var ID = 'grid';
+		confirmHide(ID, '${object.code}');
+	}
+</script>

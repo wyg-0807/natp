@@ -1,0 +1,6 @@
+<button class="layui-btn layui-btn-sm layui-btn-primary" onclick="dev_add_button()" title="快速添加按钮(仅超级管理员可见)"><i class="layui-icon">&#xe654;</i></button>
+<script type="text/javascript">
+var dev_add_button = function() {
+	dialog(null, '快速添加按钮', '/button/quick/${menu.code!}', 800, 390);
+};
+</script>

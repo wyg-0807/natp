@@ -1,0 +1,20 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_importMetaData()">
+	<i class="layui-icon layui-icon-edit"></i> 基础功能配置
+</button>
+<script type="text/javascript">
+    var eova_importMetaData = function () {
+    	if(!singletree.selectNode){
+    		$.msg($.I18N('请选择一个节点进行编辑'));
+			return;
+    	}
+    	var id = singletree.selectNode.id;
+    	$.getJSON('/menu/isFun/' + id,function(o){
+    		if(o.state == "ok"){
+    			var url = $.str.format('/menu/toMenuFun/{0}', id);
+    			dialog(null, '${I18N(button.name)} ${object.name}', url , 1080, 720);
+    		} else {
+    			$.msg('目录和自定义功能无法配置基础功能!');
+    		}
+    	})
+    }
+</script>

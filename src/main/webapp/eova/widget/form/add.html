@@ -1,0 +1,27 @@
+<!--#var body = {
+	var formId = 'addForm' + object.code;
+	var url = '/form/doAdd/' + object.code;
+-->
+
+<#form id="${formId}" objectCode="${object.code}" fixed="${fixed!}" />
+
+<script type="text/javascript">
+//---参数配置---
+var $form = $('#${formId}');
+var action = '${url}';
+var msg = $.str.format($.I18N('新增成功'), '${object.name}');
+//---参数配置---
+
+//确认按钮回调
+var btnSaveCallback = function($dialog, ID, $$) {
+	submitForm($$, ID, $form, action, msg);
+};
+
+var EOVA_FORM = "add";
+</script>
+
+<!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}-->
+
+<!--#};include("/eova/layout/form.html",{'title' : 'add ' + object.name, 'layoutContent' : body, 'isEditor' : true}){}-->
