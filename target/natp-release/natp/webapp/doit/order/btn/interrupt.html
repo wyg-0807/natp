@@ -1,0 +1,40 @@
+<button class="layui-btn layui-btn-sm" onclick="assignNurse()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!'上门未服务'}
+</button>
+<script type="text/javascript">
+    var assignNurse = function () {
+        var rows = getSelectRows('grid');
+        if (rows.length < 1) {
+            $.msg('请选择订单');
+            return;
+        }
+
+        var ids = [];
+        for (var i = 0; i < rows.length; i++) {
+            ids.push(rows[i]['id']);
+            if (rows[i]['state_val'] !== 0) {
+                $.msg('只有【等待服务】状态的订单，才能更新为【上门未服务】状态！');
+                return;
+            }
+        }
+
+        top.layer.confirm('所有选中订单将更新为【上门未服务】状态，并向患者退还服务费和耗材费，确定继续吗？', {
+            title: '请确认',
+            icon: 3,
+            btn: ['确定', '取消']
+        }, function (index) {
+            top.layer.close(index);
+            var loadLayer = top.layer.load();
+            $.post('/order/doInterrupt', {ids: ids.join()}, function (res) {
+                top.layer.close(loadLayer);
+                if (res.state === 'ok') {
+                    layer.alert(res.msg || '操作成功');
+                    $.tableReLoad('grid');
+                } else {
+                    layer.alert(res.msg, {title: '警告', icon: 7});
+                }
+            });
+        });
+    };
+
+</script>

@@ -1,0 +1,38 @@
+<!--#// 自带输入按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+    var eova_btn_${button.id} = function(){
+        layer.prompt({
+            id: 'transfer-box',
+            title: $.I18N('请输入旧、新就诊卡号，完成就诊卡转移操作'),
+            placeholder: '输入注销原因',
+            formType : 0 //输入框类型，支持0（文本）默认1（密码）2（多行文本）
+        }, function(val, index) {
+            var oldCard = $("#transfer-box > input:nth-child(1)").val();
+            var newCard = $("#transfer-new").val();
+            console.log(oldCard);
+            console.log(newCard);
+            if (oldCard.length != 8 || newCard.length != 8) {
+                $.error('请输入正确的8位数就诊卡号！');
+                return;
+            }
+            $.syncPost('${button.uri!}', {
+                old: oldCard,
+                new: newCard
+            }, function(result, status) {
+                if (result.success) {
+                    $.msg('操作成功');
+                    location.reload();
+                } else {
+                    $.error(result.msg);
+                }
+            });
+            layer.close(index);
+        });
+        $("#transfer-box > input:nth-child(1)").attr("placeholder", "【旧】就诊卡号");
+        $("#transfer-box").append('</br><input type="text" class="layui-layer-input" placeholder="【新】就诊卡号" id="transfer-new">');
+    };
+
+</script>

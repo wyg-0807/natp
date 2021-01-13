@@ -21,6 +21,7 @@
             <dependency>
                 <groupId>cn.doit</groupId>
                 <artifactId>zhangyi</artifactId>
+                <version>1.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -81,12 +82,10 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.3.10</version>
         </dependency>
         <dependency>
             <groupId>cn.doit</groupId>
             <artifactId>zhangyi-wecity-health</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -161,7 +160,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
         </dependency>
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
@@ -248,17 +246,14 @@
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-miniapp</artifactId>
-            <version>4.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-mp</artifactId>
-            <version>3.7.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-pay</artifactId>
-            <version>3.6.0</version>
         </dependency>
 
         <dependency>
@@ -459,5 +454,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,0 +1,10 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_task_stop()">
+	<i class="layui-icon eova-icon-log"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_task_stop = function() {
+	var ID = '${gridId}';
+    var val = getSelectVal(ID, 'id');
+	tableConfirm(ID, '您确定暂停任务？', '定时任务将会停止触发', '/task/stop/' + val, '操作成功');
+};
+</script>

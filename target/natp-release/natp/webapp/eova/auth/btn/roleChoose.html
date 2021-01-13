@@ -1,0 +1,13 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_roleChoose()">
+	<i class="layui-icon eova-icon-auz"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+    var eova_roleChoose = function () {
+		var ID = '${gridId}';
+		if (isSelected(ID)) {
+        	var row = getSelectRow(ID);
+        	var url = $.str.format('/auth/toRoleChoose/{0}', row.id);
+			dialog(ID, '['+ row.name +']可用功能选择', url , 1, 1);
+        }
+    }
+</script>

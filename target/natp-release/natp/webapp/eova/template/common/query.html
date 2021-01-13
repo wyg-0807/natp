@@ -1,0 +1,36 @@
+<button class="layui-btn layui-btn-sm layui-btn-normal" id="btnQuery_${queryId}" onclick="eova_query_${queryId}()">
+	<i class="layui-icon">&#xe615;</i> ${I18N('快速查询')}
+</button>
+<script type="text/javascript">
+    function eova_query_${queryId}() {
+    	try {
+    	    if (eovaQueryBefore && typeof(eovaQueryBefore) == "function") {
+    	        if(!eovaQueryBefore()){
+    	        	return;
+    	        }
+    	    }
+    	} catch(e) {}
+
+    	var $widget = $('#${parentId}');
+		
+		var paras = $.getFormParasObj($('#${queryId}'));
+    	
+    	layui.define(['table', 'form'], function (exports) {
+    		var $ = layui.$,
+    		table = layui.table,
+    		form = layui.form;
+    		
+    		table.reload('${parentId}', {
+    		  where: paras,
+    		  page: {curr: 1}
+    		});
+    	});
+    };
+
+	$('#${queryId}').unbind("keyup");
+	$('#${queryId}').bind("keyup", function (event) {
+		if (event.keyCode == 13) {
+			eova_query_${queryId}();
+		}
+	});
+</script>

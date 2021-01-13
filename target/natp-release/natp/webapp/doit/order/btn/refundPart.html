@@ -1,0 +1,47 @@
+<button class="layui-btn layui-btn-sm" onclick="refundPart()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+
+<script type="text/javascript">
+    var refundPart = function () {
+        var ID = '${gridId}';
+
+        var rows = getSelectRows(ID);
+        if (rows.length === 0) {
+            $.msg('请选择一行数据');
+            return;
+        }
+
+        if (rows[0]['state_val'] !== 1) {
+            $.msg('请确认订单状态！本操作仅适用于上门未服务且退款失败的订单。');
+            return;
+        }
+
+        if (rows[0]['payState_val'] === 0 || rows[0]['payState_val'] === 9) {
+            $.msg('该订单未付款，无法退款。');
+            return;
+        }
+
+        var manualFee = Number(rows[0]['manualFee']);
+        var instrumentFee = Number(rows[0]['instrumentFee']);
+        var refundFee = (manualFee + instrumentFee).toFixed(2);
+        layer.confirm(
+            '本操作仅用于上门未服务且退款失败的订单。继续操作，将向用户退还服务费和耗材费，共计【' + refundFee + '】元，确定要继续吗？',
+            {icon: 7, title: '严重警告'},
+            function (index) {
+                $.post('/order/doRefundPart', {id: rows[0]['id']}, function (ret) {
+                    if (ret.state === 'ok') {
+                        layer.msg(ret.msg || '操作成功');
+                        $.tableReLoad(ID);
+                    } else {
+                        layer.alert(ret.msg, {
+                            title: '警告',
+                            icon: 7
+                        });
+                    }
+                });
+                layer.close(index);
+            }
+        );
+    }
+</script>

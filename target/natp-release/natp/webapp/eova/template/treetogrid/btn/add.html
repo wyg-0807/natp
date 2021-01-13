@@ -1,0 +1,26 @@
+<button class="layui-btn layui-btn-sm" onclick="treeToGridAdd()">
+	<i class="layui-icon layui-icon-add-1"></i> ${button.name!'新增'}
+</button>
+<script type="text/javascript">
+    var treeToGridAdd = function () {
+		var ID = 'grid';
+		
+		var $zt = $.fn.zTree.getZTreeObj("master_tree");
+		var node = $zt.getSelectedNodes()[0];
+		if (!node) {
+			$.msg($.I18N('请选择一个树节点'));
+			return;
+		}
+		// if (node.isParent) { $.msg("不允许为目录添加数据"); return; }
+		
+		var treeNodeValue = node.${menu.config.tree.objectField};
+		var objectField = '${menu.config.objectField!}';
+		
+		var ref = "?ref=" + objectField + ":" + treeNodeValue;
+		
+    	var width = ${menu.config.params.width!'720'};
+    	var height = ${menu.config.params.height!'undefined'};
+    	var url = '/form/add/${object.code}' + ref;
+		dialog(ID, '${I18N(button.name)} ${object.name}', url , width, height);
+    }
+</script>

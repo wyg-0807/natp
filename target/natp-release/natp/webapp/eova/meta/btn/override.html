@@ -1,0 +1,14 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_override()">
+	<i class="layui-icon layui-icon-refresh"></i> ${button.name!'覆盖同步'}
+</button>
+<script type="text/javascript">
+var eova_override = function() {
+	var ID = '${gridId}';
+    var ids = getSelectIds(ID);
+    if (ids == '') {
+		$.msg($.I18N('请选择一行数据'));
+		return;
+	}
+	tableConfirm(ID, '批量进行覆盖同步？', '删除当前元字段并重新导入元字段,不包括元对象数据!', '/meta/override/' + ids, '同步成功');
+};
+</script>

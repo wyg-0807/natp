@@ -1,0 +1,119 @@
+<!--#layout("/eova/layout/list.html",{'title' : object.name + I18N('列表')}){-->
+
+<div class="eova-layout" style="width: calc(100% - 20px); height: calc(100% - 20px); margin: 10px;">
+	<div class="zone" style="width: 100%; height: 100%;">
+		<div class="box" style="height: 43px;">
+		
+			<#query id="queryForm" objectCode="${object.code}" />
+			
+		</div>
+
+		<div class="zone" style="height: calc(100% - 10px - 43px); top: calc(43px + 10px)">
+			<div class="box" style="height: calc(100% - 10px - 280px);">
+
+				<!--#include("/eova/template/common/toolbar.html",{id: 'toolbar', 'parentId': 'grid', 'queryId': 'queryForm'}){}-->
+
+				<#table id="grid" toolbar="toolbar" objectCode="${object.code}" menuCode="${menu.code}" isPaging="false" isFirstLoad="false" />
+
+			</div>
+			<div class="box" style="height: 280px; top: calc(100% - 280px)">
+			
+				<div id="mainChart" style="height:280px;"></div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<script src="/eova/plugins/echarts/echarts.min.js"></script>
+<script>
+
+// Table加载完成
+function gridDone(res, curr, count) {
+	syncChart(res.data);
+}
+
+<!--#
+var chart = menu.config.chart;
+-->
+function syncChart(data){
+
+	// 构建X轴数据
+	var xdata = [];
+	for (var i = 0; i < data.length; i++) {
+		xdata.push(data[i].${chart.x});
+    }
+
+	var myChart = echarts.init(document.getElementById('mainChart'));
+    var option = {
+    	    title : {
+    	        text: '${menu.name}',
+				// subtext: 'EOVA智能BI'
+    	    },
+    	    tooltip : {
+    	        trigger: 'axis'
+    	    },
+    	    legend: {
+    	        data: [<!--#for(cn in chart.ycn){-->'${cn}',<!--#}-->]
+    	    },
+    	    toolbox: {
+    	        show : true,
+    	        feature : {
+    	            mark : {show: true},
+    	            dataView : {show: true, readOnly: false},
+    	            magicType : {show: true, type: ['line', 'bar']},
+    	            restore : {show: true},
+    	            saveAsImage : {show: true}
+    	        }
+    	    },
+    	    calculable : true,
+    	    xAxis : [
+    	        {
+    	            type : 'category',
+//     	            boundaryGap : false,
+    	            data : xdata
+    	        }
+    	    ],
+    	    yAxis : [
+    	        {
+    	            type : 'value',
+    	            axisLabel : {
+    	                formatter: '{value}${chart.yunit}'
+    	            }
+    	        }
+    	    ],
+    	    series : [
+						<!--#for(var i = 0; i < chart.y.~size; i++){-->
+    	    	        {
+    	    	        	name:'${chart.ycn[i]}',
+    	    	            type:'${chart.type == 1 ? "line" : "bar"}',
+    	    	            data: function (){
+    	    	            	var list = [];
+    	    	            	for (var i = 0; i < data.length; i++) {
+    	    	            		list.push(data[i].${chart.y[i]});
+    	    	                }
+    	    	            	return list;
+    	    	            }()
+//     	    	            ,
+//     	    	            markLine : {
+//     	    	                data : [
+//     	    	                    {type : 'average', name : '平均值'}
+//     	    	                ]
+//     	    	            }
+    	    	        },
+    	    	        <!--#}-->
+    	    	    ]
+    	};
+
+    myChart.setOption(option);
+}
+
+</script>
+<!--#if(!isEmpty(menu.diy_js!)){-->
+<script type="text/javascript" src="${menu.diy_js}"></script>
+<!--#}-->
+<!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}-->
+</body>
+<!--#}-->

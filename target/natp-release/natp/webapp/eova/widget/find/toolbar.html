@@ -1,0 +1,26 @@
+<div class="layui-btn-container" id="toolbar" style="display: none;">
+	<button class="layui-btn layui-btn-sm layui-btn-normal"  onclick="queryFun()">
+		<i class="layui-icon">&#xe615;</i> 快速查询
+	</button>
+</div>
+<script type="text/javascript">
+	document.onkeydown = function(e){
+		if (e.keyCode === 13){
+			queryFun();
+		}
+	};
+
+	var queryFun = function(){
+
+		var paras = $.getFormParasObj($('#queryFindForm'));
+    	
+    	layui.use(['table', 'form'], function () {
+    		var table = layui.table;
+    		
+    		table.reload('findTable', {
+				where: paras,
+				page: {curr: 1}
+    		});
+    	});
+	};
+</script>

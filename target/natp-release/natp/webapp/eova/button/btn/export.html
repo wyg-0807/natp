@@ -1,0 +1,14 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_export()">
+	<i class="layui-icon layui-icon-next"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_export = function() {
+	var ID = '${gridId}';
+	var ids = getSelectIds(ID);
+	if (ids == '') {
+		$.msg($.I18N('请选择一行数据'));
+		return;
+	}
+    window.open('/button/doExport/' + ids);
+};
+</script>

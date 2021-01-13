@@ -6,6 +6,7 @@ import cn.doit.natp.common.MainMapping
 import cn.doit.natp.common.Strings
 import cn.doit.natp.model.Config
 import cn.doit.natp.web.admin.AdminRoutes
+import cn.doit.natp.web.api.ApiRoutes
 import cn.doit.natp.web.nat.NatRoutes
 import cn.doit.natp.web.open.OpenRoutes
 import cn.doit.natp.web.swagger.SwaggerPlugin
@@ -44,6 +45,7 @@ class AppConfig : EovaConfig() {
         me.add(SwaggerRoutes())
         me.add(OpenRoutes())
         me.add(NatRoutes())
+        me.add(ApiRoutes())
     }
 
     /**

@@ -1,0 +1,277 @@
+<!--#var body = {-->
+
+<form method="post" class="eova-form">
+
+	<input type="hidden" name="parent_id" value="${parent_id!0}">
+	
+    <fieldset>
+        <legend>菜单信息</legend>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">业务模版</label>
+			<#combo id="type" name="type" value="single_grid" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">图标</label>
+			<#icon id="icon" name="icon" value="${menu.icon!}" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">名称</label>
+			<#text id="name" name="name" value="${menu.name!}" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">编码</label>
+			<#text id="code" name="code" value="${menu.code!}" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">序号</label>
+			<#text id="index" name="indexNum" value="${menu.order_num!1}" />
+		</div>
+		
+		<div class="eova-form-field" id="trUrl" style="display: none;">
+			<label class="eova-form-label red">自定义业务URL</label>
+			<#text id="url" name="url" value="${menu.url!}" placeholder="请输入自定义功能的URL" width="895" />
+		</div>
+		
+		<div id="office" style="display: none;">
+			<div class="eova-form-field" >
+				<label class="eova-form-label red">文件类型</label>
+				<#combo id="office_type" name="office_type" value="xls" />
+			</div>
+			<div class="eova-form-field">
+				<label class="eova-form-label red">模版路径</label>
+				<#text id="path" name="path" value="${menu.url!}" placeholder="请输入Office模版路径" width="555" />
+			</div>
+		</div>
+		
+	</fieldset>
+	
+	<fieldset id="single_grid">
+        <legend>(单表)模版配置</legend>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">元对象</label>
+			<#find id="single_grid_object" name="objectCode" code="eova_field_code" field="object_code" />
+		</div>
+    </fieldset>
+    
+    <fieldset id="single_tree" style="display: none;">
+        <legend>(单表树)模版配置</legend>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">树元对象</label>
+			<#find id="single_tree_object" name="singleTreeObjectCode" code="eova_field_code" field="object_code" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">根节点父级值</label>
+			<#text id="single_tree_rootpid" name="rootPid" />
+		</div>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">PID字段</label>
+			<#find id="single_tree_parent" name="parentField" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">ID字段</label>
+			<#find id="single_tree_id" name="idField" vlaue="id"/>
+		</div>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">树形字段</label>
+			<#find id="single_tree_field" name="treeField" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label">图标字段</label>
+			<#find id="single_tree_icon" name="iconField" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label">排序字段</label>
+			<#find id="single_tree_order" name="orderField" />
+		</div>
+    </fieldset>
+    
+    <fieldset id="tree_grid" style="display: none;">
+        <legend>(树&表)模版配置</legend>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">树元对象</label>
+			<#find id="tree_grid_tree_object" name="treeGridTreeObjectCode" code="eova_field_code" field="object_code" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">树关联字段</label>
+			<#find id="tree_grid_tree_field" name="treeGridTreeFieldCode" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">ID字段</label>
+			<#find id="tree_grid_id" name="treeGridIdField" vlaue="id"/>
+		</div>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">PID字段</label>
+			<#find id="tree_grid_parent" name="treeGridParentField" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">根节点父级值</label>
+			<#text id="tree_grid_rootpid" name="treeGridRootPid" placeholder="根节点PID值" />
+		</div>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">树形字段</label>
+			<#find id="tree_grid_tree" name="treeGridTreeField" placeholder="以树形展示的列"/>
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label">图标字段</label>
+			<#find id="tree_grid_icon" name="treeGridIconField" />
+		</div>
+		
+		<hr/>
+		
+		<div class="eova-form-field">
+			<label class="eova-form-label red">表格元对象</label>
+			<#find id="tree_grid_object_code" name="treeGridObjectCode" code="eova_field_code" field="object_code" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">表格外键字段</label>
+			<#find id="tree_grid_field_code" name="treeGridFieldCode" />
+		</div>
+        
+    </fieldset>
+    
+    <fieldset id="single_chart" style="display: none;">
+        <legend>(单表图)模版配置</legend>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">图类型</label>
+			<#combo id="single_chart_type" name="singleChartType" value="" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">元对象</label>
+			<#find id="single_chart_object" name="singleChartObjectCode" code="eova_field_code" field="object_code" />
+		</div>
+		<br>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">X轴字段</label>
+			<#find id="single_chart_x" name="singleChartX" />
+		</div>
+		<br>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">Y轴字段</label>
+			<#find id="single_chart_y" name="singleChartY" multiple="true" placeholder="可多选"/>
+		</div>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">Y轴单位</label>
+			<#text id="single_chart_yunit" name="singleChartYunit" placeholder="例：100人,50元" />
+		</div>
+    </fieldset>
+    
+    <fieldset id="master_slave_grid" style="display: none;">
+        <legend>(主子表)模版配置</legend>
+        <div class="eova-form-field">
+			<label class="eova-form-label red">主对象</label>
+			<#find id="masterObjectCode" name="masterObjectCode" code="eova_field_code" field="object_code" />
+		</div>
+		<div class="eova-form-field">
+			<label class="eova-form-label red">主外键字段</label>
+			<#find id="masterFieldCode" name="masterFieldCode" />
+		</div>
+		
+		<hr>
+		
+		<div class="layui-tab layui-tab-card" lay-filter="tabs">
+			<ul class="layui-tab-title">
+				<li lay-id="1" class="layui-this">子1</li>
+				<li lay-id="2">子2</li>
+				<li lay-id="3">子3</li>
+				<li lay-id="4">子4</li>
+				<li lay-id="5">子5</li>
+			</ul>
+			<div class="layui-tab-content" style="height: auto">
+                <div class="layui-tab-item layui-show">
+					<div class="eova-form-field">
+						<label class="eova-form-label red">对象1</label>
+						<#find id="slaveObjectCode1" name="slaveObjectCode1" code="eova_field_code" field="object_code" />
+					</div>					
+					<div class="eova-form-field">
+						<label class="eova-form-label red">关联字段1</label>
+						<#find id="slaveFieldCode1" name="slaveFieldCode1" />
+					</div>					
+				</div>
+                <div class="layui-tab-item">
+					<div class="eova-form-field">
+						<label class="eova-form-label red">对象2</label>
+						<#find id="slaveObjectCode2" name="slaveObjectCode2" code="eova_field_code" field="object_code" />
+					</div>					
+					<div class="eova-form-field">
+						<label class="eova-form-label red">关联字段2</label>
+						<#find id="slaveFieldCode2" name="slaveFieldCode2" />
+					</div>					
+				</div>
+                <div class="layui-tab-item">
+					<div class="eova-form-field">
+						<label class="eova-form-label red">对象3</label>
+						<#find id="slaveObjectCode3" name="slaveObjectCode3" code="eova_field_code" field="object_code" />
+					</div>					
+					<div class="eova-form-field">
+						<label class="eova-form-label red">关联字段3</label>
+						<#find id="slaveFieldCode3" name="slaveFieldCode3" />
+					</div>					
+				</div>
+                <div class="layui-tab-item">
+					<div class="eova-form-field">
+						<label class="eova-form-label red">对象4</label>
+						<#find id="slaveObjectCode4" name="slaveObjectCode4" code="eova_field_code" field="object_code" />
+					</div>					
+					<div class="eova-form-field">
+						<label class="eova-form-label red">关联字段4</label>
+						<#find id="slaveFieldCode4" name="slaveFieldCode4" />
+					</div>					
+				</div>
+                <div class="layui-tab-item">
+					<div class="eova-form-field">
+						<label class="eova-form-label red">对象5</label>
+						<#find id="slaveObjectCode5" name="slaveObjectCode5" code="eova_field_code" field="object_code" />
+					</div>					
+					<div class="eova-form-field">
+						<label class="eova-form-label red">关联字段5</label>
+						<#find id="slaveFieldCode5" name="slaveFieldCode5" />
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+        <blockquote class="layui-elem-quote">
+        	子关联字段的控件类型如果是文本类(文本框，文本域，编辑框)<br>
+        	则子表数据为模糊查询,而(数字框，下拉框，查找框)为精确查询<br>
+        	暂时最多可以配置5个子,后续支持更多
+       	</blockquote>
+    </fieldset>
+	
+</form>
+
+
+<script type="text/javascript">
+// ------------------------- 动态参数配置
+var $form = $('.eova-form');
+var action = '/menu/add';
+var msg = '添加菜单成功';
+// ------------------------- 动态参数配置
+
+// 确认按钮回调
+var btnSaveCallback = function($dialog, ID, $$) {
+	submitForm($$, ID, $form, action, msg);
+};
+
+// Tabs 依赖
+layui.use('element', function(){
+  var element = layui.element;
+});
+
+//自定义校验规则
+$.configValidator($form, {
+	parent_id : {rule : '父级:required;' },
+	type : {rule : '业务类型:required;'},
+	icon : {rule : '图标:required;'},
+	name : {rule : '名称:required;'},
+	code : {rule : '编码:required;eovacode;'},
+	indexNum : {rule : '序号:required;'},
+	objectCode : {rule : '元对象:required;'}
+});
+
+</script>
+
+<script type="text/javascript" src="/eova/menu/add.js"></script>
+
+<!--#};include("/eova/layout/form.html",{'title' : '新增菜单', 'layoutContent' : body, 'isEditor' : false}){}-->

@@ -1,0 +1,24 @@
+<button class="layui-btn layui-btn-sm" onclick="eovaVirtual()">
+	<i class="layui-icon layui-icon-add-1"></i> 添加虚拟字段
+</button>
+<script type="text/javascript">
+    var eovaVirtual = function () {
+		var ID = '${gridId}';
+		layer.prompt({
+			title : '请输入虚拟字段名',
+			formType : 0 //输入框类型，支持0（文本）默认1（密码）2（多行文本）
+		}, function(val, index) {
+			$.syncPost('/meta/addVirtualField?objectCode=${objectCode}', {
+				input : val
+			}, function(result, status) {
+				if (result.success) {
+					$.msg('操作成功');
+					$.tableReLoad(ID);
+				} else {
+					$.alert(result.msg);
+				}
+			});
+			layer.close(index);
+		});
+    }
+</script>

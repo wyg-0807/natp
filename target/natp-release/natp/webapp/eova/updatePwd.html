@@ -1,0 +1,33 @@
+<!--#var body = {-->
+
+<form method="post" class="eova-form" style="margin: 10px;background-color: white; height: 100%">
+	<div class="eova-form-field">
+		<label class="eova-form-label red">${I18N('旧密码')}</label>
+		<#text id="oldPwd" name="oldPwd" />
+	</div>
+	<br/>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">${I18N('新密码')}</label>
+		<#text id="newPwd" name="newPwd" />
+	</div>
+	<br/>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">${I18N('确认密码')}</label>
+		<#text id="confirm" name="confirm" />
+	</div>
+</form>
+
+<script type="text/javascript">
+// ------------------------- 动态参数配置
+var $form = $('.eova-form');
+var action = '/updatePwd';
+var msg = '修改密码成功';
+// ------------------------- 动态参数配置
+
+// 确认按钮回调
+var btnSaveCallback = function($dialog, ID, $$) {
+	submitForm($$, ID, $form, action, msg);
+};
+</script>
+
+<!--#};include("/eova/layout/form.html",{'title' : '修改密码', 'layoutContent' : body, 'isEditor' : false}){}-->

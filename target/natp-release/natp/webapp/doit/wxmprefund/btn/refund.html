@@ -1,0 +1,32 @@
+<button class="layui-btn layui-btn-sm" onclick="refund()">
+    <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+  var refund = function () {
+    var ID = '${gridId}';
+
+    var rows = getSelectRows(ID);
+    if (rows.length === 0) {
+      $.msg('请选择一行数据');
+      return;
+    }
+
+    layer.confirm(
+        '请谨慎！只有HIS退款成功，并且微信退款失败的情况下，才能执行这个操作！您确定继续吗？',
+        {icon: 7, title: '严重警告'},
+        function (index) {
+          $.post('/wxmprefund/refund', {outRefundNo: rows[0]['outRefundNo']}, function (res) {
+            if (res.state === 'ok') {
+              layer.alert(res.msg || '操作成功');
+              $.tableReLoad(ID);
+            } else {
+              layer.alert(res.msg, {title: '警告', icon: 7});
+            }
+          });
+
+          layer.close(index);
+        }
+    );
+  };
+
+</script>

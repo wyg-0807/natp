@@ -1,0 +1,26 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_menu_export()">
+	<i class="layui-icon layui-icon-next"></i> 导出
+</button>
+<script type="text/javascript">
+var eova_menu_export = function() {
+	var nodes = getCheckedNodes();
+	
+	if(nodes.length == 0){
+		$.msg($.I18N('请勾选一个节点'));
+		return;
+	}
+	
+	var ts = [];
+	
+	$.each(nodes, function(i, o){
+		var cs = o.getCheckStatus();
+		// 半勾选的节点忽略
+		if(!cs.half){
+			ts.push(o.id);	
+		}
+	});
+	
+	
+	window.open('/menu/doExport/' + ts.join(','));
+};
+</script>

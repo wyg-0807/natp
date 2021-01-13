@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>查看担保人</title>
+
+    <link rel="stylesheet" href="/eova/plugins/layui/dist/css/layui.css">
+    <script type="text/javascript" src="/eova/plugins/layui/dist/layui.js"></script>
+    <script>
+	layui.use('form');
+
+    </script>
+</head>
+<body style="padding: 10px;">
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-block">
+            <input type="text" name="name" class="layui-input" value="${obj.name}" readonly>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">联系方式</label>
+        <div class="layui-input-block">
+            <input type="text" name="mobile" class="layui-input" value="${obj.mobile}" readonly>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">与患者关系</label>
+        <div class="layui-input-block">
+            <input type="text" name="relationship" class="layui-input" value="${obj.relationship}" readonly>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">身份证正面</label>
+        <div class="layui-input-block">
+            <a target="_blank" href="${obj.idCardFrontImage}">
+                <img src="${obj.idCardFrontImage}" width="214px" height="135px">
+            </a>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">身份证背面</label>
+        <div class="layui-input-block">
+            <a target="_blank" href="${obj.idCardBackImage}">
+                <img src="${obj.idCardBackImage}" width="214px" height="135px">
+            </a>
+        </div>
+    </div>
+</form>
+</body>
+</html>

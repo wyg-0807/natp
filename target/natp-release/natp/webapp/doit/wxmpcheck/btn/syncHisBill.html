@@ -1,0 +1,25 @@
+<button class="layui-btn layui-btn-sm" onclick="syncHisBill()">
+  <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+  var syncHisBill = function(){
+    var ID = '${gridId}';
+
+    var rows = getSelectRows(ID);
+    if (rows.length === 0) {
+      $.msg('请选择一行数据');
+      return;
+    }
+
+    var loader = layer.load(1);
+    $.post('/wxmpcheck/syncHisBill', {date: rows[0]['date']}, function (res) {
+      layer.close(loader);
+      if (res.state === 'ok') {
+        layer.alert(res.msg || '操作成功');
+        $.tableReLoad(ID);
+      } else {
+        layer.alert(res.msg, {title: '警告', icon: 7});
+      }
+    });
+  };
+</script>

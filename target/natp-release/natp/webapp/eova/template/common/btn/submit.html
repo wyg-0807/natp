@@ -1,0 +1,25 @@
+<!--#// 同步提交新窗口打开通用按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+	<i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+	var eova_btn_${button.id} = function(){
+		var ID = '${gridId}';
+		
+		var rows = getSelectRows(ID);
+        if (rows.length == "0") {
+        	$.msg($.I18N('请选择一行数据'));
+            return;
+        }
+	    
+        var json = JSON.stringify(rows);
+
+	    var form = $('<form target="_blank" method="POST" action="${button.uri}"></form>');
+	    var input = $('<input type="hidden" name="rows" />');  
+	    input.attr('value', json);
+	    form.append(input);
+	    $(document.body).append(form);	    
+	    form.submit();
+	    form.remove();
+	};
+</script>

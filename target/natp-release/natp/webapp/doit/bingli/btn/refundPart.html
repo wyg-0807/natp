@@ -1,0 +1,55 @@
+<button class="layui-btn layui-btn-sm" onclick="setRemark()">
+  <i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+
+<script type="text/javascript">
+var setRemark = function () {
+  var ID = '${gridId}';
+
+  var rows = getSelectRows(ID);
+  if (rows.length === 0) {
+    $.msg('请选择一行数据');
+    return;
+  }
+
+  if (rows[0]['status_val'] === 9) {
+    $.msg('该申请已被取消');
+    return;
+  }
+
+  if (rows[0]['status_val'] !== 1) {
+    $.msg('该申请尚未寄出！请寄出后，再退还多余费用。');
+    return;
+  }
+
+  var maxRefundfee = rows[0]['prefee'];
+  layer.prompt({
+    title: '请填写退费金额（不大于' + maxRefundfee + '）'
+    , formType: 2
+  }, function (value, index) {
+    layer.close(index);
+
+    var refundfee = Number(value);
+    if (Number.isNaN(refundfee)) {
+      $.msg('请正确填写退费金额');
+      return;
+    }
+    if (refundfee <= 0 || refundfee >= maxRefundfee) {
+      $.msg('请正确填写退费金额(0,' + maxRefundfee + ')');
+      return;
+    }
+
+    $.post('/bingli/refundPart', {id: rows[0]['id'], refundfee: value}, function (ret) {
+      if (ret.state === 'ok') {
+        layer.msg(ret.msg || '操作成功');
+        $.tableReLoad(ID);
+      } else {
+        layer.alert(ret.msg, {
+          title: '警告',
+          icon: 7
+        });
+      }
+    });
+  });
+}
+</script>

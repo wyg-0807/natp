@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EOVA ICON SELECT</title>
+<link rel="stylesheet" href="/eova/plugins/layui/dist/css/layui.css" media="all">
+<link rel="stylesheet" href="${STATIC!}/eova/plugins/eova/theme/layui/eova.css">
+<link rel="stylesheet" href="${STATIC!}/eova/plugins/eova/theme/icon/icon.css">
+<script type="text/javascript" src="${STATIC!}/eova/plugins/eova/theme/icon/icon.js"></script>
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/jquery.min.js"></script>
+<style type="text/css">
+#icon_panel button {
+	margin: 2px;
+	padding: 2px;
+	background-color: #FFFFFF;
+	color: #666666;
+	border: 1px solid #e2e2e2;
+	height: 40px;
+	width: 40px;
+}
+#icon_panel button:hover{
+	border: 1px solid #009688;;
+}
+.eova-icon {
+	font-size: 24px;
+}
+</style>
+</head>
+<body>
+<div>
+	<div id="icon_panel" class="icon_panel">
+		Loading...
+	</div>
+	<div style="text-align: center;padding: 5px;">
+		<button class="layui-btn layui-btn-sm" id="btmPreviousPage" onclick="previousIconPage();">上一页</a>
+		<button class="layui-btn layui-btn-sm layui-btn-primary" id="pageInfo" style="width: 70px;"></a>
+		<button class="layui-btn layui-btn-sm" id="btmNextPage" onclick="nextIconPage();">下一页</a>
+	</div>
+</div>
+<input id="icon" type="hidden">
+<script type="text/javascript">
+
+	var iconPage = 0; // 页面号
+	var iconSize = EOVAICONS.length; // 图标总数
+	var columnSize = 12; // 图标列数
+	var rowSize = 12; // 图标行数
+	var iconPageSize = rowSize * columnSize; // 每页图标数
+	var iconPageCount = parseInt(iconSize / iconPageSize) + 1; // 页面大小
+
+	function refreshIconPanel(pageIndex){
+		// 显示页号
+		$("#pageInfo").html("&nbsp;" + (pageIndex + 1) + " / " + iconPageCount + "&nbsp;");
+		var iconPanel = $("#icon_panel"); // 图标面板
+
+		// 计算图标数组坐标偏移量
+		var start = pageIndex * iconPageSize;
+		var end = start + iconPageSize;
+		// 如果结束位置大于图标数，则结束位置等于图标数
+		if(end > iconSize) end = iconSize;
+		// 清除图标面板
+		iconPanel.empty();
+		// 增加图标
+		for(var i = start;i < end; i++){
+			var iconName = "eova-icon-" + EOVAICONS[i];
+			$('<button data-icon="'+ iconName +'"><i class="eova-icon '+ iconName +'"></i></button>').appendTo(iconPanel);
+		}
+		
+		// 单双击事件的操作
+		$("#icon_panel button").click(function(){
+			$('#icon').val($(this).data('icon'));
+		}).dblclick(function(){
+			$('#icon').val($(this).data('icon'));
+			// 模拟点击确认
+			parent.$('#icon_dialog').parent().find('.layui-layer-btn0').trigger('click');
+		});
+	}
+
+	// 显示下一页图标
+	function nextIconPage(){
+		if((iconPage + 1) == iconPageCount) return;
+		iconPage++;
+		if(iconPage == (iconPageCount - 1)){
+			$('#btmNextPage').addClass('layui-btn-disabled');
+		} else {
+			$('#btmNextPage').removeClass('layui-btn-disabled');
+		}
+		$('#btmPreviousPage').removeClass('layui-btn-disabled');
+		refreshIconPanel(iconPage);
+	}
+
+	// 显示上一页图标
+	function previousIconPage(){
+		if((iconPage - 1) < 0) return;
+		iconPage--;
+		if(iconPage == 0){
+			$('#btmPreviousPage').addClass('layui-btn-disabled');
+		} else {
+			$('#btmPreviousPage').removeClass('layui-btn-disabled');
+		}
+		$('#btmNextPage').removeClass('layui-btn-disabled');
+		refreshIconPanel(iconPage);
+	}
+
+	// 初始显示第一页图标
+	$(document).ready(function(){
+		$('#btmPreviousPage').addClass('layui-btn-disabled');
+		refreshIconPanel(iconPage);
+	});
+
+	var select = function($dialog, $input, sp) {
+		var imgUrl = $('#icon').val();
+		$input.val(imgUrl);
+	};
+
+</script>
+</body>
+</html>

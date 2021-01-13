@@ -1,0 +1,30 @@
+<!--#// 自带输入按钮 -->
+<button class="layui-btn layui-btn-sm" onclick="eova_btn_${button.id}()">
+	<i class="layui-icon ${button.icon!}"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+	var eova_btn_${button.id} = function(){
+	    var ID = '${gridId}';
+	    if(isSelected(ID)){
+	    	layer.prompt({
+				title : $.I18N('请输入信息'),
+				formType : 0 //输入框类型，支持0（文本）默认1（密码）2（多行文本）
+			}, function(val, index) {
+				var json = JSON.stringify(getSelectRows(ID));
+	    		$.syncPost('${button.uri!}', {
+					rows : json,
+					input : val
+				}, function(result, status) {
+					if (result.success) {
+						$.msg($.I18N('操作成功'));
+						$.tableReLoad(ID);
+					} else {
+						$.alert(result.msg);
+					}
+				});
+	    		
+				layer.close(index);
+			});
+	    }
+	};
+</script>

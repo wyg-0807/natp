@@ -1,0 +1,13 @@
+<button class="layui-btn layui-btn-sm" onclick="singleAdd()">
+	<i class="layui-icon layui-icon-add-1"></i> ${button.name!'新增'}
+</button>
+<script type="text/javascript">
+    var singleAdd = function () {
+		var ID = 'master_grid';
+		
+    	var width = ${menu.config.params.width!'720'};
+    	var height = ${menu.config.params.height!'undefined'};
+    	var url = $.str.format('/form/add/${object.code}');
+		dialog(ID, '${I18N(button.name)} ${object.name}', url , width, height);
+    }
+</script>

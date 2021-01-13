@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配置管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/eova/plugins/layui/dist/css/layui.css">
+</head>
+<body>
+<div class="layui-fluid layui-form">
+    <div class="layui-form-item">
+        <label class="layui-form-label">微信支付</label>
+        <div class="layui-input-block">
+            <input type="radio" name="config.wxPayEnabled" value="true" title="启用" ${config.wxPayEnabled?'checked':''}>
+            <input type="radio" name="config.wxPayEnabled" value="false" title="禁用" ${config.wxPayEnabled?'':'checked'}>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">微信退款</label>
+        <div class="layui-input-block">
+            <input type="radio" name="config.wxRefundEnabled" value="true" title="启用" ${config.wxRefundEnabled?'checked':''}>
+            <input type="radio" name="config.wxRefundEnabled" value="false" title="禁用" ${config.wxRefundEnabled?'':'checked'}>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">一个订单允许多次退款</label>
+        <div class="layui-input-block">
+            <input type="radio" name="config.multipleRefundEnabled" value="true" title="启用" ${config.multipleRefundEnabled?'checked':''}>
+            <input type="radio" name="config.multipleRefundEnabled" value="false" title="禁用" ${config.multipleRefundEnabled?'':'checked'}>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">最多可申请几份病历</label>
+        <div class="layui-input-block">
+            <input type="number" class="layui-input" name="config.maxMedicalRecordCopies" value="${config.maxMedicalRecordCopies}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">不可预约的科室</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请输入内容，每个科室独占一行" class="layui-textarea" name="config.departmentsExcludes">${departmentsExcludes}</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="config">保存</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/eova/plugins/layui/dist/layui.js"></script>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form
+            , $    = layui.$
+        ;
+
+        form.on('submit(config)', function (data) {
+            var departmentsExcludes = (data.field["config.departmentsExcludes"] || "").split("\n");
+            if (departmentsExcludes.length === 0) {
+                data.field["config.departmentsExcludes"] = '[]';
+            } else {
+                data.field["config.departmentsExcludes"] = '[\"' + departmentsExcludes.join('","') + '\"]';
+            }
+            $.ajax({
+                url: '/config/doUpdate'
+                , type: 'post'
+                , data: data.field
+                , success: function (resp) {
+                    if (resp.state === 'ok') {
+                        top.layer.msg('操作成功', {
+                            icon: 1
+                            , time: 1000
+                        }, function () {
+                            location.reload();
+                        });
+                    } else {
+                        top.layer.alert(resp.msg, {title: '警告', icon: 7});
+                    }
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!--#layout("/eova/layout/dialog.html",{'title' : 'Eova Find'}){-->
+
+<div class="eova-layout" style="width: calc(100% - 10px); height: calc(100% - 10px); margin: 5px;">
+	<div class="zone" style="width: 100%; height: 100%;">
+		<div class="box" style="height: 85px;">
+		
+			<#queryJson id="queryFindForm" items="${itemList}" />
+		
+		</div>
+		<div class="box" style="height: calc(100% - 5px - 85px); top: calc(5px + 85px)">
+			
+			<!--#include("/eova/widget/find/toolbar.html"){}-->
+			
+			<#table id="findTable" toolbar="toolbar" objectJson="${objectJson}" fieldsJson="${fieldsJson}" url="${action!}" isPaging="${isPaging!true}" isDiyToolbar="false" />
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<script>
+var ID = 'findTable';
+
+// Table初始化选中
+function findTableDone(res, curr, count) {
+	// 初始值选中
+	var val = "${parameter.val}";
+	if(val && val != ''){
+		var vals = val.split(',');
+		$.each(res.data, function(i, o) {
+			$.each(vals, function(iv, val) {
+				if(o.${pk} == val){
+					layui.use([ 'table' ], function() {
+						var $ = layui.$, table = layui.table;
+						// 选中行(可多选)
+						table.checkRows(ID, i);
+					});
+				}
+			});
+		});
+	}
+}
+
+// 双击快速选择
+layui.use([ 'table' ], function() {
+	var $ = layui.$, table = layui.table;
+	
+	// 双击选中值并点击确认
+	table.on('rowDouble(' + ID + ')', function(obj) {
+		// 选中当前行
+		table.checkRow(ID, obj.index);
+		// 模拟点击确认
+		parent.$('#eova_find_dialog').parent().find('.layui-layer-btn0')[0].click();
+	});
+});
+
+var object = JSON.parse('${objectJson}'.replace('"{', '{').replace('}"', '}'));
+var select = function($dialog, findBox) {
+
+	var rows = getSelectRows(ID);
+	try {
+		// 有选中行
+		var oldValue = findBox.getValue();
+		var newValue = '';
+		if (rows.length != "0") {
+			var vals = [], txts = [];
+			for (var i = 0; i < rows.length; i++) { //组成一个字符串，ID主键用逗号隔开
+				vals.push(rows[i][object.pk_name]);
+				txts.push(rows[i][object.cn]);
+			}
+			// 获取主键值(第一列)
+			findBox.setValue(vals.join(','));
+			// 获取翻译值(第二列)
+			findBox.setText(txts.join(','));
+			newValue = findBox.getValue();
+		} else {
+			// 没选值，就清空
+			findBox.setValue("");
+			findBox.setText("");
+		}
+		// 值变更回调
+		if (oldValue != newValue) {
+			findBox.options.onChange.call(findBox.$dom, oldValue, newValue, rows); // 回调带回所选行,可取其它列值.
+		}
+	} catch (err) {
+		alert("查找框前端选值异常:" + err);
+	} finally {
+		layer.close(layer.getFrameIndex(window.name));
+	}
+
+};
+
+var clear = function($dialog, findBox) {
+
+	try {
+		var oldValue = findBox.getValue();
+		var newValue = '';
+
+		findBox.setValue("");
+		findBox.setText("");
+
+		// 值变更回调
+		if (oldValue != newValue) {
+			console.log(oldValue + '|' + newValue);
+			findBox.options.onChange.call(findBox.$dom, oldValue, newValue);
+		}
+	} catch (err) {
+		alert("查找框前端清值异常:" + err);
+	} finally {
+		layer.close(layer.getFrameIndex(window.name));
+	}
+};
+</script>
+
+<!--#}-->

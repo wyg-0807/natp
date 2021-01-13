@@ -60,6 +60,7 @@ class AdminRoutes : Routes() {
         add("/config", ConfigController::class.java)
         LoginInterceptor.excludes.add("/init")
         LoginInterceptor.excludes.add("/code")
+
     }
 
 }

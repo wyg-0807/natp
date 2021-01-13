@@ -1,0 +1,36 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_add()">
+	<i class="layui-icon layui-icon-add-1"></i> 新增
+</button>
+<script type="text/javascript">
+    var eova_add = function () {
+		
+		var node = singletree.selectNode;
+
+		// 默认新增到根下
+		var menuId = 0;
+		if (node) {
+			menuId = node[singletree.idField];
+		}
+		
+    	var url = '/menu/toAdd?parent_id=' + menuId;
+
+    	if(menuId == 0){
+    		layer.confirm('也可主动选择一个指定目录进行添加!', {
+				title : '未选择父目录,确认添加到根目录下?',
+				icon : 3,
+				btn : [ '确定', '取消' ]
+			}, function(i) {
+				addMenu(url);
+				layer.close(i);
+			});
+			return;
+		}
+    	addMenu(url);
+    }
+    
+    function addMenu(url){
+    	dialog(function(){
+    		location.reload();
+    	}, '新功能配置', url , 1100, 600);
+	}
+</script>

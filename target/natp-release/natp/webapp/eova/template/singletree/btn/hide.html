@@ -1,0 +1,52 @@
+<button class="layui-btn layui-btn-sm" onclick="singleHide()">
+	<i class="layui-icon layui-icon-close"></i> ${button.name!'隐藏'}
+</button>
+<script type="text/javascript">
+	var singleHide = function() {
+		var code = '${object.code}';
+		var nodes = getCheckedNodes();
+		
+		if(nodes.length == 0){
+			$.msg($.I18N('请勾选一个节点'));
+			return;
+		}
+		
+		var ts = [];
+		
+		$.each(nodes, function(i, o){
+			var cs = o.getCheckStatus();
+			// 半勾选的节点忽略
+			if(!cs.half){
+				var t = {};
+				// 只需要获取主键值
+				var idField = singletree.idField;
+				t[idField] = o[idField];
+				
+				ts.push(t);	
+			}
+		});
+		
+		var title = $.I18N('请确认');
+		var info = $.I18N('您要隐藏当前所选数据');
+		var msg = $.I18N('隐藏成功');
+		
+		layer.confirm(info, {
+			title : title,
+			icon : 3,
+			btn : [ '确定', '取消' ]
+		}, function() {
+			$.syncPost($.str.format('/grid/hide/{0}', code), {
+				rows : JSON.stringify(ts)
+			}, function(result, status) {
+				if (result.success) {
+					$.msg(msg);
+					layer.close(layer.getFrameIndex(window.name));
+					location.reload();
+				} else {
+					$.alert(result.msg);
+					layer.close(layer.getFrameIndex(window.name));
+				}
+			});
+		});
+	}
+</script>

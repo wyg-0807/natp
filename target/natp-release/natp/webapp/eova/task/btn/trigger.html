@@ -1,0 +1,10 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_task_trigger()">
+	<i class="layui-icon eova-icon-ok"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_task_trigger = function() {
+	var ID = '${gridId}';
+    var val = getSelectVal(ID, 'id');
+	tableConfirm(ID, '您确定立即执行？', '将会手工触发一次任务', '/task/trigger/' + val, '操作成功');
+};
+</script>

@@ -1,0 +1,86 @@
+<!--#var body = {-->
+<form method="post" class="eova-form" onsubmit="return false;" style="background-color: white">
+
+	<input type="hidden" name="menu_code" value="${menuCode}" >
+	
+	<div class="eova-form-field" title="人靠衣装马靠鞍，选个图标高大上">
+		<label class="eova-form-label">图标</label>
+		<#icon id="icon" name="icon" value="" />
+	</div>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">名称</label>
+		<#text id="name" name="name" value="" />
+	</div>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">通按钮模版选择</label>
+		&nbsp;&nbsp;
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="前端随便写,服务端也是你自己写" data-ui="">自定义</button>
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="后台执行逻辑,并刷新前台组件" data-ui="/eova/template/common/btn/execute.html">后台执行</button>
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="选中数据,二次确认后,异步提交" data-ui="/eova/template/common/btn/confirm.html">二次确认</button>
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="选中数据,输入内容后,异步提交" data-ui="/eova/template/common/btn/input.html">输入内容</button>
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="以新窗口方式打开指定URI" data-ui="/eova/template/common/btn/open.html">跳转新窗</button>
+        <button class="layui-btn layui-btn-primary layui-btn-sm template" title="选中数据,同步提交到新窗口" data-ui="/eova/template/common/btn/submit.html">提交新窗</button>
+        <i class="layui-icon layui-icon-help"></i><a href="http://doc.eova.cn/217082" target="_blank">查看帮助</a>
+	</div>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">前端代码文件</label>
+		<#text id="ui" name="ui" value="" placeholder="按钮的前端代码文件路径 例：/order/btn/print.html" width="555" />
+	</div>
+	<div class="eova-form-field" id="ui_uri" style="display: none;">
+		<label class="eova-form-label red">服务端URL</label>
+		<#text id="uri" name="uri" placeholder="服务端Controller方法的URL" width="555" />
+	</div>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">服务权限配置</label>
+		<#texts id="bs" name="bs" placeholder="服务端URI权限配置. 例：\n/order/print;\n/order/print_data;" style="width:533px;height:60px;" />
+	</div>
+	<div class="eova-form-field">
+		<label class="eova-form-label red">所属按钮组号</label>
+		<#text id="group_num" name="group_num" value="0" placeholder="默认即可,主子模版子表按钮组从1开始" />
+	</div>
+	<div class="eova-form-field" title="可多选">
+		<label class="eova-form-label red">授权给角色</label>
+		<#combo id="role" name="role" exp="selectEovaRole" multiple="true" value="1" />
+	</div>
+</form>
+
+<script type="text/javascript">
+    $(function () {
+    	$.configValidator($form, {
+			// icon: {rule: '图标:required;'},
+	        name: {rule: '名称:required;'},
+	        ui: {rule: '前端代码文件:required;'},
+	        bs: {rule: '服务权限配置:required;'},
+    	});
+        
+        $('.template').click(function(){
+        	$('#ui').eovatext().setValue($(this).data('ui'));
+        	var txt = $(this).text();
+        	var $uiuri = $('#ui_uri');
+        	if(txt == '自定义'){
+        		$uiuri.hide();
+        		$form.validator("setField", "uri", null);
+        	} else {
+        		$uiuri.show();
+        		$form.validator("setField", "uri", "服务端URL:required;");
+        	}
+        	
+        	return false;
+        })
+    });
+</script>
+
+<script type="text/javascript">
+// ------------------------- 动态参数配置
+var $form = $('.eova-form');
+var action = '/button/doQuick';
+var msg = '添加按钮成功';
+// ------------------------- 动态参数配置
+
+// 确认按钮回调
+var btnSaveCallback = function($dialog, ID, $$) {
+	submitForm($$, ID, $form, action, msg);
+};
+</script>
+
+<!--#};include("/eova/layout/form.html",{'title' : '快速添加按钮', 'layoutContent' : body, 'isEditor' : false}){}-->

@@ -1,0 +1,14 @@
+<button class="layui-btn layui-btn-sm" onclick="eovaSyncnew()">
+	<i class="layui-icon layui-icon-refresh-1"></i> ${button.name!'增量同步'}
+</button>
+<script type="text/javascript">
+var eovaSyncnew = function() {
+	var ID = '${gridId}';
+	var ids = getSelectIds(ID);
+	if (ids == '') {
+		$.msg($.I18N('请选择一行数据'));
+		return;
+	}
+	tableConfirm(ID, '批量进行增量同步？', '同步DB中新增字段的元数据', '/meta/syncnew/' + ids, '同步成功');
+};
+</script>

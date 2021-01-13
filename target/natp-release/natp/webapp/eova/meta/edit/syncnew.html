@@ -1,0 +1,34 @@
+<button class="layui-btn layui-btn-sm" onclick="eovaSyncnew()">
+	<i class="layui-icon layui-icon-refresh-1"></i> 增量同步元字段
+</button>
+<script type="text/javascript">
+var eovaSyncnew = function() {
+	
+	var ID = '${gridId}';
+	var title = '确定进行增量同步？';
+	var info = '将同步DB中新增字段的元数据';
+	var msg = $.I18N('同步成功');
+	var url = '/meta/syncnew?objectCode=${objectCode}';
+	
+	layui.use([ 'table' ], function() {
+		var $ = layui.$, table = layui.table;
+			layer.confirm(info, {
+				title : title,
+				icon : 3,
+				btn : [ '确定', '取消' ]
+			}, function() {
+				$.syncPost(url, {}, function(result, status) {
+					if (result.success) {
+						$.msg(msg);
+						layer.close(layer.getFrameIndex(window.name));
+		
+						table.reload(ID);
+					} else {
+						$.alert(result.msg);
+						layer.close(layer.getFrameIndex(window.name));
+					}
+				});
+			});
+	});
+};
+</script>

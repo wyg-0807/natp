@@ -1,0 +1,31 @@
+<button class="layui-btn layui-btn-sm" onclick="eova_copy()">
+	<i class="layui-icon layui-icon-template"></i> ${button.name!}
+</button>
+<script type="text/javascript">
+var eova_copy = function() {
+	var ID = '${gridId}';
+	
+	var rows = getSelectRows(ID);
+    var num = rows.length;
+    if (num != 1) {
+    	$.msg("复制元数据一次只能选择一个元对象！");
+        return;
+    }
+
+    layer.prompt({
+		title : '请输入复制的新元对象编码',
+		formType : 0
+	}, function(val, index) {
+		$.syncPost('/meta/copy/' + rows[0].id + '-' + val, function(result, status) {
+			if (result.success) {
+				$.msg('复制成功');
+				$.tableReLoad(ID);
+			} else {
+				$.alert(result.msg);
+			}
+		});
+		layer.close(index);
+	});
+
+};
+</script>

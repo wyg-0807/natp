@@ -1,0 +1,30 @@
+<!--#layout("/eova/layout/list.html",{'title' : '元字段编辑-' + objectCode}){-->
+
+<div class="eova-layout" style="width: calc(100% - 20px); height: calc(100% - 20px); margin: 10px;">
+	<div class="box" style="width: 100%; height: 100%;">
+		<div class="layui-btn-container" id="toolbar" style="display: none;">
+			<!--#include('/eova/meta/edit/syncnew.html',{'gridId': 'fieldTable'}){}-->
+			<!--#include('/eova/meta/edit/virtual.html',{'gridId': 'fieldTable'}){}-->
+			<!--#include('/eova/meta/edit/dict.html',{'gridId': 'fieldTable'}){}-->
+			<!--#include('/eova/meta/edit/delete.html',{'gridId': 'fieldTable'}){}-->
+		</div>
+			
+		<#table id="fieldTable" toolbar="toolbar" objectCode="eova_field_code" isFirstLoad="true" isPaging="false" cellEdit="update,delete" where="fieldTableWhere()"/>
+	</div>
+</div>
+
+<script>
+// 自定义Table条件:
+function fieldTableWhere(){
+	return  {query_object_code : '${objectCode}'}
+}
+</script>
+<script type="text/javascript" src="${STATIC!}/eova/ui/js/operation.js"></script>
+<!--#if(!isEmpty(menu.diy_js!)){-->
+<script type="text/javascript" src="${menu.diy_js}"></script>
+<!--#}-->
+<!--#if(!isEmpty(object.diy_js!)){-->
+<script type="text/javascript" src="${object.diy_js}"></script>
+<!--#}-->
+
+<!--#}-->

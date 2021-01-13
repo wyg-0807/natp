@@ -1,6 +1,5 @@
 package cn.doit.natp.web.api
 
-import cn.doit.natp.web.api.PatientController
 import cn.doit.natp.common.ExceptionInterceptor
 import cn.doit.natp.web.open.WxMpController
 import com.jfinal.config.Routes
@@ -15,6 +14,8 @@ class ApiRoutes : Routes() {
         add("/api/patient", PatientController::class.java)
         add("/api/wxmp", WxMpController::class.java)
 
+        //测试
+        add("/api/test",TestController::class.java)
     }
 
 }
