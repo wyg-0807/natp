@@ -7,6 +7,7 @@ import com.jfinal.core.Controller
 import com.jfinal.core.paragetter.Para
 import com.jfinal.ext.interceptor.GET
 import com.jfinal.ext.interceptor.POST
+import com.jfinal.kit.HttpKit
 
 class TestController : Controller() {
     @Before(POST::class)
@@ -45,6 +46,7 @@ class TestController : Controller() {
             this.age = age
             this.num = num
         }
+        //println(HttpKit.readData(getRequest())+"=============================")
         renderJson(test.update())
     }
 
