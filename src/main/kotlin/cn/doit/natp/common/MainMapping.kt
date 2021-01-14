@@ -27,6 +27,8 @@ object MainMapping {
             addMapping(NatExamGroupItem.TABLE, NatExamGroupItem::class.java)
             addMapping(NatPatient.TABLE, NatPatient::class.java)
             addMapping(NatReserveLog.TABLE, NatReserveLog::class.java)
+
+            //测试
             addMapping(Test.TABLE,Test::class.java)
         }
     }

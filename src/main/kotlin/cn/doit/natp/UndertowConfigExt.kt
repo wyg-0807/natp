@@ -12,7 +12,6 @@ class UndertowConfigExt(jfinalConfigClass: Class<*>, undertowConfig: String) : U
     private val defaultAccessLogFormat = "common"
     private val defaultAccessLogDirectory = Paths.get(System.getProperty("user.home"), "logs").toAbsolutePath().toString()
 
-
     companion object {
         private const val ACCESS_LOG_FORMAT = "undertow.accessLog.format"
         private const val ACCESS_LOG_DIRECTORY = "undertow.accessLog.directory"
